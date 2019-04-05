@@ -2,7 +2,11 @@
 Android SkeletonWearableApp Sample
 ===================================
 
-This sample is a basic skeleton app which can be used as a starting point for wear development.
+This is a sample app for RPCS that demonstrates that we are able to code up a simple working app that can read hearbeat data and post it at regular intervals.
+
+This code is courtesty the RPCS Phase 2 Watch team.
+
+We have based this app off of the SkeletonWearableApp provided by Android Studio (as starter code).
 
 Introduction
 ------------
