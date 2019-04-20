@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/abel/Desktop/SkeletonWearableApp/Wearable/build/intermediates/incremental/mergeDebugResources/merged.dir/values-b+es+419/values-b+es+419.xml",
+            "outputFile": "C:\\Users\\akshatp\\Desktop\\JuniorSpring\\RPCS\\rpcs\\Wearable\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-b+es+419\\values-b+es+419.xml",
             "map": [
                 {
-                    "source": "/Users/abel/.gradle/caches/transforms-1/files-1.1/wearable-2.2.0.aar/e00a1e0b088ccbf2bf0c11724e727b04/res/values-b+es+419/values.xml",
+                    "source": "C:\\Users\\akshatp\\.gradle\\caches\\transforms-1\\files-1.1\\wearable-2.2.0.aar\\0bd8191d3923c0727bea8dd6f3c97674\\res\\values-b+es+419\\values.xml",
                     "from": {
                         "startLines": "4,7,10,13,16,19,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/abel/Desktop/SkeletonWearableApp/Wearable/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v21/values-v21.xml",
+            "outputFile": "C:\\Users\\akshatp\\Desktop\\JuniorSpring\\RPCS\\rpcs\\Wearable\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v21\\values-v21.xml",
             "map": [
                 {
-                    "source": "/Users/abel/.gradle/caches/transforms-1/files-1.1/wearable-2.2.0.aar/e00a1e0b088ccbf2bf0c11724e727b04/res/values-v21/values.xml",
+                    "source": "C:\\Users\\akshatp\\.gradle\\caches\\transforms-1\\files-1.1\\wearable-2.2.0.aar\\0bd8191d3923c0727bea8dd6f3c97674\\res\\values-v21\\values.xml",
                     "from": {
                         "startLines": "4,8,11,15,21,30,42,54,57,61",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0",
@@ -23,26 +23,7 @@
                     }
                 },
                 {
-                    "source": "/Users/abel/.gradle/caches/transforms-1/files-1.1/support-compat-27.0.2.aar/1ace472301af621575d7c34658712854/res/values-v21/values-v21.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,13",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,159,223,290,354,470,596,722,850,1022",
-                        "endLines": "2,3,4,5,6,7,8,9,12,17",
-                        "endColumns": "103,63,66,63,115,125,125,127,12,12",
-                        "endOffsets": "154,218,285,349,465,591,717,845,1017,1355"
-                    },
-                    "to": {
-                        "startLines": "2,3,4,5,6,7,14,18,56,59",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,159,223,290,354,470,927,1221,3235,3407",
-                        "endLines": "2,3,4,5,6,7,14,18,58,63",
-                        "endColumns": "103,63,66,63,115,125,125,127,12,12",
-                        "endOffsets": "154,218,285,349,465,591,1048,1344,3402,3740"
-                    }
-                },
-                {
-                    "source": "/Users/abel/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.0.2.aar/0f487057cebdafa9878db71246c50430/res/values-v21/values-v21.xml",
+                    "source": "C:\\Users\\akshatp\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.0.2.aar\\056ad94245618f8958629352cc95bdae\\res\\values-v21\\values-v21.xml",
                     "from": {
                         "startLines": "2,5,8,11",
                         "startColumns": "4,4,4,4",
@@ -58,6 +39,25 @@
                         "endLines": "10,13,17,21",
                         "endColumns": "12,12,12,12",
                         "endOffsets": "759,922,1216,1511"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\akshatp\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.2.aar\\da1dc14293496463928aaafed31bcd4d\\res\\values-v21\\values-v21.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,13",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,159,223,290,354,470,596,722,850,1022",
+                        "endLines": "2,3,4,5,6,7,8,9,12,17",
+                        "endColumns": "103,63,66,63,115,125,125,127,12,12",
+                        "endOffsets": "154,218,285,349,465,591,717,845,1017,1355"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,14,18,56,59",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,159,223,290,354,470,927,1221,3235,3407",
+                        "endLines": "2,3,4,5,6,7,14,18,58,63",
+                        "endColumns": "103,63,66,63,115,125,125,127,12,12",
+                        "endOffsets": "154,218,285,349,465,591,1048,1344,3402,3740"
                     }
                 }
             ]

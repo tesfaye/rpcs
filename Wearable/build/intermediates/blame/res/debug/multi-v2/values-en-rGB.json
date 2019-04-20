@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/abel/Desktop/SkeletonWearableApp/Wearable/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rGB/values-en-rGB.xml",
+            "outputFile": "C:\\Users\\akshatp\\Desktop\\JuniorSpring\\RPCS\\rpcs\\Wearable\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-en-rGB\\values-en-rGB.xml",
             "map": [
                 {
-                    "source": "/Users/abel/.gradle/caches/transforms-1/files-1.1/wearable-2.2.0.aar/e00a1e0b088ccbf2bf0c11724e727b04/res/values-en-rGB/values.xml",
+                    "source": "C:\\Users\\akshatp\\.gradle\\caches\\transforms-1\\files-1.1\\wearable-2.2.0.aar\\0bd8191d3923c0727bea8dd6f3c97674\\res\\values-en-rGB\\values.xml",
                     "from": {
                         "startLines": "4,7,10,13,16,19,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -23,24 +23,24 @@
                     }
                 },
                 {
-                    "source": "/Users/abel/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/9a9bb9a194c09a8b7cca403221643c0d/res/values-en-rGB/values.xml",
+                    "source": "C:\\Users\\akshatp\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.2.aar\\da1dc14293496463928aaafed31bcd4d\\res\\values-en-rGB\\values-en-rGB.xml",
                     "from": {
-                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
-                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
-                        "startOffsets": "285,388,572,695,800,1010,1131,1273,1401,1619,1722,1905,2028,2233,2407,2496,2584",
-                        "endColumns": "102,183,122,104,209,120,141,127,217,102,182,122,204,173,88,87,103",
-                        "endOffsets": "387,571,694,799,1009,1130,1272,1400,1618,1721,1904,2027,2232,2406,2495,2583,2687"
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
                     },
                     "to": {
-                        "startLines": "51,52,53,54,55,56,57,58,60,61,62,63,64,65,66,67,68",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "4684,4791,4975,5102,5211,5421,5546,5692,6021,6239,6346,6529,6656,6861,7039,7132,7224",
-                        "endColumns": "106,183,126,108,209,124,145,131,217,106,182,126,204,177,92,91,107",
-                        "endOffsets": "4786,4970,5097,5206,5416,5541,5687,5819,6234,6341,6524,6651,6856,7034,7127,7219,7327"
+                        "startLines": "73",
+                        "startColumns": "4",
+                        "startOffsets": "7692",
+                        "endColumns": "100",
+                        "endOffsets": "7788"
                     }
                 },
                 {
-                    "source": "/Users/abel/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.8.0.aar/5eca1f2868ac10c9546ce9af9d795c5e/res/values-en-rGB/values.xml",
+                    "source": "C:\\Users\\akshatp\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-11.8.0.aar\\4bd9e2b8ea1734aeb128f0daa0b6812e\\res\\values-en-rGB\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -57,20 +57,20 @@
                     }
                 },
                 {
-                    "source": "/Users/abel/.gradle/caches/transforms-1/files-1.1/support-compat-27.0.2.aar/1ace472301af621575d7c34658712854/res/values-en-rGB/values-en-rGB.xml",
+                    "source": "C:\\Users\\akshatp\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-11.8.0.aar\\599ba2ecf7f248d0128d5307d32362cd\\res\\values-en-rGB\\values.xml",
                     "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "285,388,572,695,800,1010,1131,1273,1401,1619,1722,1905,2028,2233,2407,2496,2584",
+                        "endColumns": "102,183,122,104,209,120,141,127,217,102,182,122,204,173,88,87,103",
+                        "endOffsets": "387,571,694,799,1009,1130,1272,1400,1618,1721,1904,2027,2232,2406,2495,2583,2687"
                     },
                     "to": {
-                        "startLines": "73",
-                        "startColumns": "4",
-                        "startOffsets": "7692",
-                        "endColumns": "100",
-                        "endOffsets": "7788"
+                        "startLines": "51,52,53,54,55,56,57,58,60,61,62,63,64,65,66,67,68",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "4684,4791,4975,5102,5211,5421,5546,5692,6021,6239,6346,6529,6656,6861,7039,7132,7224",
+                        "endColumns": "106,183,126,108,209,124,145,131,217,106,182,126,204,177,92,91,107",
+                        "endOffsets": "4786,4970,5097,5206,5416,5541,5687,5819,6234,6341,6524,6651,6856,7034,7127,7219,7327"
                     }
                 }
             ]

@@ -17,14 +17,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
         package="com.example.android.google.wearable.app" >
 
-    <uses-sdk android:minSdkVersion="20"
-              android:targetSdkVersion="22" />
-
     <uses-feature android:name="android.hardware.type.watch" />
 
     <uses-permission android:name="android.permission.BODY_SENSORS" />
 
     <application
+            android:name=".Setup"
             android:allowBackup="true"
             android:icon="@drawable/ic_launcher"
             android:label="@string/app_name"

@@ -1,27 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/abel/Desktop/SkeletonWearableApp/Wearable/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hi/values-hi.xml",
+            "outputFile": "C:\\Users\\akshatp\\Desktop\\JuniorSpring\\RPCS\\rpcs\\Wearable\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hi\\values-hi.xml",
             "map": [
                 {
-                    "source": "/Users/abel/.gradle/caches/transforms-1/files-1.1/play-services-base-11.8.0.aar/9a9bb9a194c09a8b7cca403221643c0d/res/values-hi/values.xml",
-                    "from": {
-                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
-                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
-                        "startOffsets": "281,387,590,715,825,1035,1163,1301,1429,1648,1755,1952,2080,2288,2468,2557,2650",
-                        "endColumns": "105,202,124,109,209,127,137,127,218,106,196,127,207,179,88,92,110",
-                        "endOffsets": "386,589,714,824,1034,1162,1300,1428,1647,1754,1951,2079,2287,2467,2556,2649,2760"
-                    },
-                    "to": {
-                        "startLines": "51,52,53,54,55,56,57,58,60,61,62,63,64,65,66,67,68",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "4739,4849,5052,5181,5295,5505,5637,5779,6117,6336,6447,6644,6776,6984,7168,7261,7358",
-                        "endColumns": "109,202,128,113,209,131,141,131,218,110,196,131,207,183,92,96,114",
-                        "endOffsets": "4844,5047,5176,5290,5500,5632,5774,5906,6331,6442,6639,6771,6979,7163,7256,7353,7468"
-                    }
-                },
-                {
-                    "source": "/Users/abel/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.8.0.aar/5eca1f2868ac10c9546ce9af9d795c5e/res/values-hi/values.xml",
+                    "source": "C:\\Users\\akshatp\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-11.8.0.aar\\4bd9e2b8ea1734aeb128f0daa0b6812e\\res\\values-hi\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -38,7 +21,24 @@
                     }
                 },
                 {
-                    "source": "/Users/abel/.gradle/caches/transforms-1/files-1.1/wearable-2.2.0.aar/e00a1e0b088ccbf2bf0c11724e727b04/res/values-hi/values.xml",
+                    "source": "C:\\Users\\akshatp\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-11.8.0.aar\\599ba2ecf7f248d0128d5307d32362cd\\res\\values-hi\\values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "281,387,590,715,825,1035,1163,1301,1429,1648,1755,1952,2080,2288,2468,2557,2650",
+                        "endColumns": "105,202,124,109,209,127,137,127,218,106,196,127,207,179,88,92,110",
+                        "endOffsets": "386,589,714,824,1034,1162,1300,1428,1647,1754,1951,2079,2287,2467,2556,2649,2760"
+                    },
+                    "to": {
+                        "startLines": "51,52,53,54,55,56,57,58,60,61,62,63,64,65,66,67,68",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "4739,4849,5052,5181,5295,5505,5637,5779,6117,6336,6447,6644,6776,6984,7168,7261,7358",
+                        "endColumns": "109,202,128,113,209,131,141,131,218,110,196,131,207,183,92,96,114",
+                        "endOffsets": "4844,5047,5176,5290,5500,5632,5774,5906,6331,6442,6639,6771,6979,7163,7256,7353,7468"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\akshatp\\.gradle\\caches\\transforms-1\\files-1.1\\wearable-2.2.0.aar\\0bd8191d3923c0727bea8dd6f3c97674\\res\\values-hi\\values.xml",
                     "from": {
                         "startLines": "4,7,10,13,16,19,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
@@ -57,7 +57,7 @@
                     }
                 },
                 {
-                    "source": "/Users/abel/.gradle/caches/transforms-1/files-1.1/support-compat-27.0.2.aar/1ace472301af621575d7c34658712854/res/values-hi/values-hi.xml",
+                    "source": "C:\\Users\\akshatp\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.2.aar\\da1dc14293496463928aaafed31bcd4d\\res\\values-hi\\values-hi.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
