@@ -40,6 +40,7 @@ import android.widget.Toast;
 public class MainActivity extends Activity
         implements DelayedConfirmationView.DelayedConfirmationListener, SensorEventListener {
     private static final String TAG = "MainActivity";
+    public static final boolean DEBUG = true;
 
     private static final int NOTIFICATION_ID = 1;
     private static final int NOTIFICATION_REQUEST_CODE = 1;
@@ -51,6 +52,11 @@ public class MainActivity extends Activity
     SensorManager mSensorManager;
     Sensor mHeartRateSensor;
     SensorEventListener sensorEventListener;
+    private Boolean fallDetected = false;
+    public static float normalThreshold = 10, fallenThreshold = 5;
+    private float[] mGravity;
+    private float mAccelLast, mAccel, mAccelCurrent, maxAccelSeen;
+    public static final String LOG_TAG = "MEMES";
 
     @Override
     public void onCreate(Bundle b) {
@@ -68,6 +74,10 @@ public class MainActivity extends Activity
         mSensorManager = ((SensorManager) getSystemService(SENSOR_SERVICE));
         mHeartRateSensor = mSensorManager.getDefaultSensor(Sensor.TYPE_HEART_RATE);
         mSensorManager.registerListener(this, mHeartRateSensor, SensorManager.SENSOR_DELAY_NORMAL);
+        mSensorManager.registerListener(this,
+                mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER),
+                SensorManager.SENSOR_DELAY_UI);
+
         Log.i(TAG, "LISTENER REGISTERED.");
 
 
@@ -85,6 +95,33 @@ public class MainActivity extends Activity
         if (event.sensor.getType() == Sensor.TYPE_HEART_RATE) {
             String msg = "" + (int)event.values[0];
             Toast.makeText(this, "heart rate " + msg, Toast.LENGTH_LONG).show();
+        } else if (event.sensor.getType() == Sensor.TYPE_ACCELEROMETER) {
+            double threshold = (fallDetected) ? fallenThreshold : normalThreshold;
+            mGravity = event.values.clone();
+            mAccelLast = mAccelCurrent;
+            mAccelCurrent = (float) Math.sqrt(mGravity[0] * mGravity[0] + mGravity[1] * mGravity[1] + mGravity[2] * mGravity[2]);
+            float delta = mAccelCurrent - mAccelLast;
+            mAccel = Math.abs(mAccel * 0.9f) + delta;
+            if (mAccel > maxAccelSeen) {
+                maxAccelSeen = mAccel;
+            }
+
+
+            if (DEBUG)
+                Log.d(LOG_TAG, "Sensor ServiceX: onChange mAccel=" + mAccel + " maxAccelSeen=" + maxAccelSeen + " threshold=" + threshold);
+            if (mAccel > threshold) {
+                maxAccelSeen = 0;
+                if ((fallDetected) && (mAccel > fallenThreshold)) {
+                    // fall detected
+                    Toast.makeText(this, "Fall detected", Toast.LENGTH_SHORT).show();
+                } else {
+                    if ((!fallDetected) && (mAccel > normalThreshold)) {
+                        fallDetected = true;
+                        // fall detected
+                        Toast.makeText(this, "Fall detected", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            }
         }
         else
             Log.d(TAG, "Unknown sensor type");

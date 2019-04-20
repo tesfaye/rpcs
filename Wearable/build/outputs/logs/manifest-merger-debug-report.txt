@@ -1,8 +1,8 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:17:1-50:12
-INJECTED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:17:1-50:12
-INJECTED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:17:1-50:12
+ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:17:1-51:12
+INJECTED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:17:1-51:12
+INJECTED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:17:1-51:12
 MERGED from [com.google.android.gms:play-services-wearable:16.0.1] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\31d3fdd865eb93a1ca32d97da4a9db05\AndroidManifest.xml:17:1-24:12
 MERGED from [com.android.support:support-v13:27.1.1] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\0aea0ad678682b8328e59a006bc296b9\AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.support:wearable:2.4.0] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\3703ccb63c44cfbfd4586d9e6977c8f8\AndroidManifest.xml:2:1-15:12
@@ -21,17 +21,17 @@ MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\akshatp\.gradle\cach
 MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\5fce130a17a815d973d172796df80d92\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\af719d89901e34f114211927101de311\AndroidManifest.xml:17:1-22:12
 MERGED from [android.arch.core:runtime:1.1.0] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\e15e450efcae2591c3d26bf6b0af36cc\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:17:1-50:12
-INJECTED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:17:1-50:12
+INJECTED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:17:1-51:12
+INJECTED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:17:1-51:12
 	package
 		ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:18:9-58
 	android:versionName
 		INJECTED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml
-		ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:17:1-50:12
+		ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:17:1-51:12
 		INJECTED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml
-		ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:17:1-50:12
+		ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:17:1-51:12
 		INJECTED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:17:11-69
@@ -44,7 +44,7 @@ ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\And
 	android:name
 		ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:22:22-68
 application
-ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:24:5-48:19
+ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:24:5-49:19
 MERGED from [com.google.android.gms:play-services-wearable:16.0.1] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\31d3fdd865eb93a1ca32d97da4a9db05\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.gms:play-services-wearable:16.0.1] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\31d3fdd865eb93a1ca32d97da4a9db05\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.support:wearable:2.4.0] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\3703ccb63c44cfbfd4586d9e6977c8f8\AndroidManifest.xml:9:5-13:19
@@ -60,49 +60,51 @@ MERGED from [com.android.support:recyclerview-v7:26.0.2] C:\Users\akshatp\.gradl
 MERGED from [com.android.support:percent:26.0.2] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\2b773be9ff6f66a49de1e1a69db6ac1f\AndroidManifest.xml:22:5-26:19
 MERGED from [com.android.support:percent:26.0.2] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\2b773be9ff6f66a49de1e1a69db6ac1f\AndroidManifest.xml:22:5-26:19
 	android:label
-		ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:27:13-45
+		ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:28:13-45
 	android:icon
-		ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:26:13-49
+		ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:27:13-49
 	android:allowBackup
-		ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:25:13-39
+		ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:26:13-39
 	android:theme
-		ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:28:13-63
+		ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:29:13-63
+	android:name
+		ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:25:13-34
 activity#com.example.android.google.wearable.app.MainActivity
-ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:29:9-40:20
+ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:30:9-41:20
 	android:label
-		ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:31:13-45
+		ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:32:13-45
 	android:name
-		ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:30:13-41
+		ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:31:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:32:13-35:29
+ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:33:13-36:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:33:17-68
+ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:34:17-68
 	android:name
-		ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:33:25-66
+		ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:34:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:34:17-76
+ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:35:17-76
 	android:name
-		ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:34:27-74
+		ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:35:27-74
 intent-filter#action:name:com.google.android.clockwork.example.SKELETON+category:name:android.intent.category.DEFAULT
-ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:36:13-39:29
+ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:37:13-40:29
 action#com.google.android.clockwork.example.SKELETON
-ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:37:17-87
+ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:38:17-87
 	android:name
-		ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:37:25-85
+		ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:38:25-85
 category#android.intent.category.DEFAULT
-ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:38:17-75
+ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:39:17-75
 	android:name
-		ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:38:27-73
+		ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:39:27-73
 activity#com.example.android.google.wearable.app.GridExampleActivity
-ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:41:9-47:20
+ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:42:9-48:20
 	android:name
-		ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:42:13-48
+		ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:43:13-48
 intent-filter#action:name:com.example.android.google.wearable.app.GRID_ACTIVITY+category:name:android.intent.category.DEFAULT
-ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:43:13-46:29
+ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:44:13-47:29
 action#com.example.android.google.wearable.app.GRID_ACTIVITY
-ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:44:17-95
+ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:45:17-95
 	android:name
-		ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:44:25-93
+		ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:45:25-93
 uses-sdk
 INJECTED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml
