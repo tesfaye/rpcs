@@ -1,4 +1,0 @@
-#Sat Apr 20 19:49:11 EDT 2019
-base.0=/Users/abel/Desktop/rpcswatch/Wearable/build/intermediates/transforms/dexMerger/debug/9
-path.0=classes.dex
-renamed.0=classes.dex
