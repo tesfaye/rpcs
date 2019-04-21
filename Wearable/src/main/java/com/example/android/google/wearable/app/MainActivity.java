@@ -25,6 +25,7 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.NotificationManagerCompat;
 import android.support.v4.view.GestureDetectorCompat;
@@ -37,9 +38,22 @@ import android.view.View;
 import android.widget.ScrollView;
 import android.widget.Toast;
 
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.StringRequest;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.HashMap;
+import java.util.Map;
+
 public class MainActivity extends Activity
         implements DelayedConfirmationView.DelayedConfirmationListener, SensorEventListener {
     private static final String TAG = "MainActivity";
+    final String url = "https://kinect.andrew.cmu.edu:8000/watch/events";
     public static final boolean DEBUG = true;
 
     private static final int NOTIFICATION_ID = 1;
@@ -59,6 +73,33 @@ public class MainActivity extends Activity
     public static final String LOG_TAG = "MEMES";
 
     private static int counter = 0;
+    private String heartRate;
+
+    private final static int INTERVAL = 1000 * 30; //2 minutes
+    Handler mHandler = new Handler();
+
+    Runnable mHandlerTask = new Runnable()
+    {
+        @Override
+        public void run() {
+            try {
+                postHeartRate();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+            mHandler.postDelayed(mHandlerTask, INTERVAL);
+        }
+    };
+
+    void startRepeatingTask()
+    {
+        mHandlerTask.run();
+    }
+
+    void stopRepeatingTask()
+    {
+        mHandler.removeCallbacks(mHandlerTask);
+    }
 
     @Override
     public void onCreate(Bundle b) {
@@ -69,8 +110,6 @@ public class MainActivity extends Activity
         mDismissOverlayView.setIntroText(R.string.intro_text);
         mDismissOverlayView.showIntroIfNecessary();
         mGestureDetector = new GestureDetectorCompat(this, new LongPressListener());
-
-        //Toast.makeText(this, "hi", Toast.LENGTH_LONG).show();
 
 
         mSensorManager = ((SensorManager) getSystemService(SENSOR_SERVICE));
@@ -84,18 +123,19 @@ public class MainActivity extends Activity
 
 
         mSensorManager.registerListener(sensorEventListener, mHeartRateSensor, mSensorManager.SENSOR_DELAY_FASTEST);
+
+        startRepeatingTask();
     }
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent event) {
-        //Toast.makeText(this, "fwffwfwfwaf", Toast.LENGTH_LONG).show();
         return mGestureDetector.onTouchEvent(event) || super.dispatchTouchEvent(event);
     }
 
     @Override
     public void onSensorChanged(SensorEvent event) {
         if (event.sensor.getType() == Sensor.TYPE_HEART_RATE) {
-            String msg = "" + (int)event.values[0];
+            heartRate = "" + (int)event.values[0];
             //Toast.makeText(this, "heart rate " + msg, Toast.LENGTH_LONG).show();
         } else if (event.sensor.getType() == Sensor.TYPE_ACCELEROMETER) {
             double threshold = (fallDetected) ? fallenThreshold : normalThreshold;
@@ -117,6 +157,11 @@ public class MainActivity extends Activity
                 if ((fallDetected) && (mAccel > fallenThreshold)) {
                     // fall detected
                     if(counter > 15) {
+                        try {
+                            postFall();
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
                         Toast.makeText(this, "Fall detected", Toast.LENGTH_SHORT).show();
                         counter = 0;
                     }
@@ -126,6 +171,11 @@ public class MainActivity extends Activity
                         fallDetected = true;
                         // fall detected
                         if(counter > 15) {
+                            try {
+                                postFall();
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
                             Toast.makeText(this, "Fall detected", Toast.LENGTH_SHORT).show();
                             counter = 0;
                         }
@@ -135,6 +185,52 @@ public class MainActivity extends Activity
         }
         else
             Log.d(TAG, "Unknown sensor type");
+    }
+
+    private void postHeartRate() throws JSONException {
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("event_id", 1);
+        jsonObject.put("event_description", heartRate);
+        jsonObject.put("event_category", "heartrate");
+
+        JsonObjectRequest jsonRequest = new JsonObjectRequest(Request.Method.POST, url, jsonObject,
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        //TODO: handle success
+                        Log.d(TAG, "onResponse: heart rate detected and posted to server");
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                error.printStackTrace();
+                //TODO: handle failure
+            }
+        });
+        Setup.getInstance().getRequestQueue().add(jsonRequest);
+    }
+
+    private void postFall() throws JSONException {
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("event_id", 0);
+        jsonObject.put("event_description", Long.toString(System.currentTimeMillis()));
+        jsonObject.put("event_category", "fall");
+
+        JsonObjectRequest jsonRequest = new JsonObjectRequest(Request.Method.POST, url, jsonObject,
+                new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response) {
+                //TODO: handle success
+                Log.d(TAG, "onResponse: fall detected and posted to server");
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                error.printStackTrace();
+                //TODO: handle failure
+            }
+        });
+        Setup.getInstance().getRequestQueue().add(jsonRequest);
     }
 
     @Override
@@ -147,24 +243,6 @@ public class MainActivity extends Activity
         public void onLongPress(MotionEvent event) {
             mDismissOverlayView.show();
         }
-    }
-
-    /**
-     * Handles the button to launch a notification.
-     */
-    public void showNotification(View view) {
-        Notification notification = new NotificationCompat.Builder(this)
-                .setContentTitle(getString(R.string.notification_title))
-                .setContentText(getString(R.string.notification_title))
-                .setSmallIcon(R.drawable.ic_launcher)
-                .addAction(R.drawable.ic_launcher,
-                        getText(R.string.action_launch_activity),
-                        PendingIntent.getActivity(this, NOTIFICATION_REQUEST_CODE,
-                                new Intent(this, GridExampleActivity.class),
-                                PendingIntent.FLAG_UPDATE_CURRENT))
-                .build();
-        NotificationManagerCompat.from(this).notify(NOTIFICATION_ID, notification);
-        finish();
     }
 
 
@@ -208,5 +286,11 @@ public class MainActivity extends Activity
                 scrollView.fullScroll(scrollDirection);
             }
         });
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        stopRepeatingTask();
     }
 }
