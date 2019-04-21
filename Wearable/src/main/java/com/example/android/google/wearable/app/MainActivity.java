@@ -31,6 +31,7 @@ import android.support.v4.app.NotificationManagerCompat;
 import android.support.v4.view.GestureDetectorCompat;
 import android.support.wearable.view.DelayedConfirmationView;
 import android.support.wearable.view.DismissOverlayView;
+import android.util.Base64;
 import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
@@ -38,12 +39,16 @@ import android.view.View;
 import android.widget.ScrollView;
 import android.widget.Toast;
 
+import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
+import com.google.android.gms.common.internal.Constants;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -53,7 +58,7 @@ import java.util.Map;
 public class MainActivity extends Activity
         implements DelayedConfirmationView.DelayedConfirmationListener, SensorEventListener {
     private static final String TAG = "MainActivity";
-    final String url = "https://kinect.andrew.cmu.edu:8000/watch/events";
+    final String url = "http://kinect.andrew.cmu.edu:8000/watch/events";
     public static final boolean DEBUG = true;
 
     private static final int NOTIFICATION_ID = 1;
@@ -125,6 +130,9 @@ public class MainActivity extends Activity
         mSensorManager.registerListener(sensorEventListener, mHeartRateSensor, mSensorManager.SENSOR_DELAY_FASTEST);
 
         startRepeatingTask();
+
+
+
     }
 
     @Override
@@ -193,33 +201,11 @@ public class MainActivity extends Activity
         jsonObject.put("event_description", heartRate);
         jsonObject.put("event_category", "heartrate");
 
-        JsonObjectRequest jsonRequest = new JsonObjectRequest(Request.Method.POST, url, jsonObject,
-                new Response.Listener<JSONObject>() {
-                    @Override
-                    public void onResponse(JSONObject response) {
-                        //TODO: handle success
-                        Log.d(TAG, "onResponse: heart rate detected and posted to server");
-                    }
-                }, new Response.ErrorListener() {
+        JSONArray array = new JSONArray();
+        array.put(jsonObject);
+        JsonArrayRequest jsonRequest = new JsonArrayRequest(Request.Method.POST, url, array, new Response.Listener<JSONArray>() {
             @Override
-            public void onErrorResponse(VolleyError error) {
-                error.printStackTrace();
-                //TODO: handle failure
-            }
-        });
-        Setup.getInstance().getRequestQueue().add(jsonRequest);
-    }
-
-    private void postFall() throws JSONException {
-        JSONObject jsonObject = new JSONObject();
-        jsonObject.put("event_id", 0);
-        jsonObject.put("event_description", Long.toString(System.currentTimeMillis()));
-        jsonObject.put("event_category", "fall");
-
-        JsonObjectRequest jsonRequest = new JsonObjectRequest(Request.Method.POST, url, jsonObject,
-                new Response.Listener<JSONObject>() {
-            @Override
-            public void onResponse(JSONObject response) {
+            public void onResponse(JSONArray response) {
                 //TODO: handle success
                 Log.d(TAG, "onResponse: fall detected and posted to server");
             }
@@ -229,7 +215,62 @@ public class MainActivity extends Activity
                 error.printStackTrace();
                 //TODO: handle failure
             }
-        });
+        }){
+            @Override
+            public Map<String, String> getHeaders()  {
+                Map<String,String> headers = new HashMap<>();
+                // add headers <key,value>
+                String credentials = "watch_user"+":"+"rpcs_watch2019";
+                String auth = "Basic "
+                        + Base64.encodeToString(credentials.getBytes(),
+                        Base64.NO_WRAP);
+                headers.put("authorization", auth);
+                headers.put("Content-Type", "application/json");
+                return headers;
+            }
+        };
+        jsonRequest.setRetryPolicy(new DefaultRetryPolicy(10 * 1000, 0, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
+        Setup.getInstance().getRequestQueue().add(jsonRequest);
+    }
+
+    private void postFall() throws JSONException {
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("event_id", 0);
+        jsonObject.put("event_description", Long.toString(System.currentTimeMillis()));
+        jsonObject.put("event_category", "fall");
+
+
+        JSONArray array = new JSONArray();
+        array.put(jsonObject);
+        JsonArrayRequest jsonRequest = new JsonArrayRequest(Request.Method.POST, url, array, new Response.Listener<JSONArray>() {
+            @Override
+            public void onResponse(JSONArray response) {
+                //TODO: handle success
+                Log.d(TAG, "onResponse: fall detected and posted to server");
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                error.printStackTrace();
+                //TODO: handle failure
+            }
+        }){
+            @Override
+            public Map<String, String> getHeaders()  {
+                Map<String,String> headers = new HashMap<>();
+                // add headers <key,value>
+                String credentials = "watch_user"+":"+"rpcs_watch2019";
+                String auth = "Basic "
+                        + Base64.encodeToString(credentials.getBytes(),
+                        Base64.NO_WRAP);
+                headers.put("authorization", auth);
+                headers.put("Content-Type", "application/json");
+                return headers;
+            }
+        };
+
+        System.out.println("request is " +"Request body: " + new String(jsonRequest.getBody()));
+        jsonRequest.setRetryPolicy(new DefaultRetryPolicy(10 * 1000, 0, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
         Setup.getInstance().getRequestQueue().add(jsonRequest);
     }
 
