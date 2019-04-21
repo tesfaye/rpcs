@@ -1,44 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\akshatp\\Desktop\\JuniorSpring\\RPCS\\rpcs\\Wearable\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sq\\values-sq.xml",
+            "outputFile": "/Users/abel/Desktop/rpcswatch/Wearable/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sq/values-sq.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\akshatp\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-11.8.0.aar\\599ba2ecf7f248d0128d5307d32362cd\\res\\values-sq\\values.xml",
-                    "from": {
-                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
-                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
-                        "startOffsets": "281,386,591,726,831,1051,1183,1335,1476,1705,1811,2017,2153,2381,2591,2682,2775",
-                        "endColumns": "104,204,134,104,219,131,151,140,228,105,205,135,227,209,90,92,106",
-                        "endOffsets": "385,590,725,830,1050,1182,1334,1475,1704,1810,2016,2152,2380,2590,2681,2774,2881"
-                    },
-                    "to": {
-                        "startLines": "2,3,4,5,6,7,8,9,11,12,13,14,15,16,17,18,19",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,214,419,558,667,887,1023,1179,1512,1741,1851,2057,2197,2425,2639,2734,2831",
-                        "endColumns": "108,204,138,108,219,135,155,144,228,109,205,139,227,213,94,96,110",
-                        "endOffsets": "209,414,553,662,882,1018,1174,1319,1736,1846,2052,2192,2420,2634,2729,2826,2937"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\akshatp\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-11.8.0.aar\\4bd9e2b8ea1734aeb128f0daa0b6812e\\res\\values-sq\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "283",
-                        "endColumns": "187",
-                        "endOffsets": "470"
-                    },
-                    "to": {
-                        "startLines": "10",
-                        "startColumns": "4",
-                        "startOffsets": "1324",
-                        "endColumns": "187",
-                        "endOffsets": "1507"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\akshatp\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.2.aar\\da1dc14293496463928aaafed31bcd4d\\res\\values-sq\\values-sq.xml",
+                    "source": "/Users/abel/.gradle/caches/transforms-2/files-2.1/cae81d9a1ae1062e4ffd8b054eb4a4d4/res/values-sq/values-sq.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -52,6 +18,40 @@
                         "startOffsets": "2942",
                         "endColumns": "100",
                         "endOffsets": "3038"
+                    }
+                },
+                {
+                    "source": "/Users/abel/.gradle/caches/transforms-2/files-2.1/7f6b0f00896df326944b6ebcae4e1998/res/values-sq/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "187",
+                        "endOffsets": "434"
+                    },
+                    "to": {
+                        "startLines": "10",
+                        "startColumns": "4",
+                        "startOffsets": "1324",
+                        "endColumns": "187",
+                        "endOffsets": "1507"
+                    }
+                },
+                {
+                    "source": "/Users/abel/.gradle/caches/transforms-2/files-2.1/62e66d087c3668b200f95a9dcb4177ae/res/values-sq/values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "245,350,555,690,795,1015,1147,1299,1440,1669,1775,1981,2117,2345,2555,2646,2739",
+                        "endColumns": "104,204,134,104,219,131,151,140,228,105,205,135,227,209,90,92,106",
+                        "endOffsets": "349,554,689,794,1014,1146,1298,1439,1668,1774,1980,2116,2344,2554,2645,2738,2845"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7,8,9,11,12,13,14,15,16,17,18,19",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,214,419,558,667,887,1023,1179,1512,1741,1851,2057,2197,2425,2639,2734,2831",
+                        "endColumns": "108,204,138,108,219,135,155,144,228,109,205,139,227,213,94,96,110",
+                        "endOffsets": "209,414,553,662,882,1018,1174,1319,1736,1846,2052,2192,2420,2634,2729,2826,2937"
                     }
                 }
             ]

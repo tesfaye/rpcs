@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\akshatp\\Desktop\\JuniorSpring\\RPCS\\rpcs\\Wearable\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v23\\values-v23.xml",
+            "outputFile": "/Users/abel/Desktop/rpcswatch/Wearable/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v23/values-v23.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\akshatp\\.gradle\\caches\\transforms-1\\files-1.1\\wearable-2.2.0.aar\\0bd8191d3923c0727bea8dd6f3c97674\\res\\values-v23\\values.xml",
+                    "source": "/Users/abel/.gradle/caches/transforms-2/files-2.1/31028061f3a7f187490140e154a65e48/res/values-v23/values.xml",
                     "from": {
                         "startLines": "4,8,12,20,23",
                         "startColumns": "0,0,0,0,0",

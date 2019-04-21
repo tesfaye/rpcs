@@ -1,16 +1,16 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\akshatp\\Desktop\\JuniorSpring\\RPCS\\rpcs\\Wearable\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-hy\\values-hy.xml",
+            "outputFile": "/Users/abel/Desktop/rpcswatch/Wearable/build/intermediates/incremental/mergeDebugResources/merged.dir/values-hy/values-hy.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\akshatp\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-11.8.0.aar\\599ba2ecf7f248d0128d5307d32362cd\\res\\values-hy\\values.xml",
+                    "source": "/Users/abel/.gradle/caches/transforms-2/files-2.1/62e66d087c3668b200f95a9dcb4177ae/res/values-hy/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
-                        "startOffsets": "281,385,582,714,820,1033,1167,1320,1458,1684,1790,1989,2123,2344,2536,2627,2720",
+                        "startOffsets": "245,349,546,678,784,997,1131,1284,1422,1648,1754,1953,2087,2308,2500,2591,2684",
                         "endColumns": "103,196,131,105,212,133,152,137,225,105,198,133,220,191,90,92,106",
-                        "endOffsets": "384,581,713,819,1032,1166,1319,1457,1683,1789,1988,2122,2343,2535,2626,2719,2826"
+                        "endOffsets": "348,545,677,783,996,1130,1283,1421,1647,1753,1952,2086,2307,2499,2590,2683,2790"
                     },
                     "to": {
                         "startLines": "2,3,4,5,6,7,8,9,11,12,13,14,15,16,17,18,19",
@@ -21,24 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\akshatp\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-11.8.0.aar\\4bd9e2b8ea1734aeb128f0daa0b6812e\\res\\values-hy\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "283",
-                        "endColumns": "209",
-                        "endOffsets": "492"
-                    },
-                    "to": {
-                        "startLines": "10",
-                        "startColumns": "4",
-                        "startOffsets": "1306",
-                        "endColumns": "209",
-                        "endOffsets": "1511"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\akshatp\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.2.aar\\da1dc14293496463928aaafed31bcd4d\\res\\values-hy\\values-hy.xml",
+                    "source": "/Users/abel/.gradle/caches/transforms-2/files-2.1/cae81d9a1ae1062e4ffd8b054eb4a4d4/res/values-hy/values-hy.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -52,6 +35,23 @@
                         "startOffsets": "2909",
                         "endColumns": "100",
                         "endOffsets": "3005"
+                    }
+                },
+                {
+                    "source": "/Users/abel/.gradle/caches/transforms-2/files-2.1/7f6b0f00896df326944b6ebcae4e1998/res/values-hy/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "209",
+                        "endOffsets": "456"
+                    },
+                    "to": {
+                        "startLines": "10",
+                        "startColumns": "4",
+                        "startOffsets": "1306",
+                        "endColumns": "209",
+                        "endOffsets": "1511"
                     }
                 }
             ]

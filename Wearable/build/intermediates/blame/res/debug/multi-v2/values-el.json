@@ -1,27 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\akshatp\\Desktop\\JuniorSpring\\RPCS\\rpcs\\Wearable\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-el\\values-el.xml",
+            "outputFile": "/Users/abel/Desktop/rpcswatch/Wearable/build/intermediates/incremental/mergeDebugResources/merged.dir/values-el/values-el.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\akshatp\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-11.8.0.aar\\4bd9e2b8ea1734aeb128f0daa0b6812e\\res\\values-el\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "283",
-                        "endColumns": "222",
-                        "endOffsets": "505"
-                    },
-                    "to": {
-                        "startLines": "10",
-                        "startColumns": "4",
-                        "startOffsets": "1332",
-                        "endColumns": "222",
-                        "endOffsets": "1550"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\akshatp\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.2.aar\\da1dc14293496463928aaafed31bcd4d\\res\\values-el\\values-el.xml",
+                    "source": "/Users/abel/.gradle/caches/transforms-2/files-2.1/cae81d9a1ae1062e4ffd8b054eb4a4d4/res/values-el/values-el.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -38,13 +21,13 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\akshatp\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-11.8.0.aar\\599ba2ecf7f248d0128d5307d32362cd\\res\\values-el\\values.xml",
+                    "source": "/Users/abel/.gradle/caches/transforms-2/files-2.1/62e66d087c3668b200f95a9dcb4177ae/res/values-el/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
-                        "startOffsets": "281,390,608,738,847,1087,1210,1354,1484,1732,1838,2039,2166,2403,2574,2669,2757",
+                        "startOffsets": "245,354,572,702,811,1051,1174,1318,1448,1696,1802,2003,2130,2367,2538,2633,2721",
                         "endColumns": "108,217,129,108,239,122,143,129,247,105,200,126,236,170,94,87,107",
-                        "endOffsets": "389,607,737,846,1086,1209,1353,1483,1731,1837,2038,2165,2402,2573,2668,2756,2864"
+                        "endOffsets": "353,571,701,810,1050,1173,1317,1447,1695,1801,2002,2129,2366,2537,2632,2720,2828"
                     },
                     "to": {
                         "startLines": "2,3,4,5,6,7,8,9,11,12,13,14,15,16,17,18,19",
@@ -52,6 +35,23 @@
                         "startOffsets": "105,218,436,570,683,923,1050,1198,1555,1803,1913,2114,2245,2482,2657,2756,2848",
                         "endColumns": "112,217,133,112,239,126,147,133,247,109,200,130,236,174,98,91,111",
                         "endOffsets": "213,431,565,678,918,1045,1193,1327,1798,1908,2109,2240,2477,2652,2751,2843,2955"
+                    }
+                },
+                {
+                    "source": "/Users/abel/.gradle/caches/transforms-2/files-2.1/7f6b0f00896df326944b6ebcae4e1998/res/values-el/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "222",
+                        "endOffsets": "469"
+                    },
+                    "to": {
+                        "startLines": "10",
+                        "startColumns": "4",
+                        "startOffsets": "1332",
+                        "endColumns": "222",
+                        "endOffsets": "1550"
                     }
                 }
             ]

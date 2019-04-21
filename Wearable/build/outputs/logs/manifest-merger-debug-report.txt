@@ -1,185 +1,205 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:17:1-51:12
-INJECTED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:17:1-51:12
-INJECTED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:17:1-51:12
-MERGED from [com.google.android.gms:play-services-wearable:16.0.1] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\31d3fdd865eb93a1ca32d97da4a9db05\AndroidManifest.xml:17:1-24:12
-MERGED from [com.android.support:support-v13:27.1.1] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\0aea0ad678682b8328e59a006bc296b9\AndroidManifest.xml:17:1-22:12
-MERGED from [com.google.android.support:wearable:2.4.0] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\3703ccb63c44cfbfd4586d9e6977c8f8\AndroidManifest.xml:2:1-15:12
-MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\2b7e2c2b706c6dc5f34b16d936cfc25e\AndroidManifest.xml:17:1-29:12
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\dabe47e5aa8cc581b152c898cd74a335\AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\5f9416f025c8f83607ca59394a347e81\AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:recyclerview-v7:26.0.2] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\b059fc0adc7a2f62c7f5963664b8e75e\AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:support-v4:27.1.1] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\d3dda7ba9f00f76ae273285f9c36f481\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:percent:26.0.2] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\2b773be9ff6f66a49de1e1a69db6ac1f\AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\27a358808785fa81646360da1de7b86a\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\284e8280b936a3a94838fa950e0d8df3\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\26050f5fb07a3e8fb6e856438c81e51a\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\9397e6c158e3e241b8df55f429e4e570\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-compat:27.1.1] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\8e906cd85f1fdcfd79755d1f2a176d3a\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\129e46d160ad2313198796d8849033a3\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\5fce130a17a815d973d172796df80d92\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\af719d89901e34f114211927101de311\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.core:runtime:1.1.0] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\e15e450efcae2591c3d26bf6b0af36cc\AndroidManifest.xml:17:1-22:12
-INJECTED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:17:1-51:12
-INJECTED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:17:1-51:12
+ADDED from /Users/abel/Desktop/rpcswatch/Wearable/src/main/AndroidManifest.xml:17:1-56:12
+INJECTED from /Users/abel/Desktop/rpcswatch/Wearable/src/main/AndroidManifest.xml:17:1-56:12
+INJECTED from /Users/abel/Desktop/rpcswatch/Wearable/src/main/AndroidManifest.xml:17:1-56:12
+MERGED from [com.google.android.gms:play-services-wearable:16.0.1] /Users/abel/.gradle/caches/transforms-2/files-2.1/4e09429a431d64a208a54ac1739c57e7/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:support-v13:27.1.1] /Users/abel/.gradle/caches/transforms-2/files-2.1/509804424771073609bdeca453cbd83e/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.support:wearable:2.4.0] /Users/abel/.gradle/caches/transforms-2/files-2.1/31028061f3a7f187490140e154a65e48/AndroidManifest.xml:2:1-15:12
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /Users/abel/.gradle/caches/transforms-2/files-2.1/62e66d087c3668b200f95a9dcb4177ae/AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /Users/abel/.gradle/caches/transforms-2/files-2.1/4127ae8345c418f320a93642a619c090/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] /Users/abel/.gradle/caches/transforms-2/files-2.1/7f6b0f00896df326944b6ebcae4e1998/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:recyclerview-v7:26.0.2] /Users/abel/.gradle/caches/transforms-2/files-2.1/24be7a8abb5825e58ac4d8ee5d776126/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:27.1.1] /Users/abel/.gradle/caches/transforms-2/files-2.1/35b0e1b98f69262cdd3a276e17759095/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:percent:26.0.2] /Users/abel/.gradle/caches/transforms-2/files-2.1/6d0184891bb127745304145f89dc82e8/AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-media-compat:27.1.1] /Users/abel/.gradle/caches/transforms-2/files-2.1/0c6a84e5ce39b23f88511b341f973acd/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/abel/.gradle/caches/transforms-2/files-2.1/b255b9085734b517cc3f4ab8b3ac0269/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/abel/.gradle/caches/transforms-2/files-2.1/19422603d9abc1c5fefb404581dc6586/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/abel/.gradle/caches/transforms-2/files-2.1/3abc0e3d7f58e707e4a1ec54e4038791/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] /Users/abel/.gradle/caches/transforms-2/files-2.1/cae81d9a1ae1062e4ffd8b054eb4a4d4/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/abel/.gradle/caches/transforms-2/files-2.1/a1d7b0eeb616c0886f8806a0c43c9d4f/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/abel/.gradle/caches/transforms-2/files-2.1/1953c08cc7b80e3e0122b2d3bb1d8fd6/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/abel/.gradle/caches/transforms-2/files-2.1/66204346ab097108ea7a30df61f47742/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] /Users/abel/.gradle/caches/transforms-2/files-2.1/408ffd4c38597075b1504b477038f892/AndroidManifest.xml:17:1-22:12
+INJECTED from /Users/abel/Desktop/rpcswatch/Wearable/src/main/AndroidManifest.xml:17:1-56:12
+INJECTED from /Users/abel/Desktop/rpcswatch/Wearable/src/main/AndroidManifest.xml:17:1-56:12
 	package
-		ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:18:9-58
+		ADDED from /Users/abel/Desktop/rpcswatch/Wearable/src/main/AndroidManifest.xml:18:9-58
 	android:versionName
-		INJECTED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml
-		ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:17:1-51:12
-		INJECTED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml
+		INJECTED from /Users/abel/Desktop/rpcswatch/Wearable/src/main/AndroidManifest.xml
+		ADDED from /Users/abel/Desktop/rpcswatch/Wearable/src/main/AndroidManifest.xml:17:1-56:12
+		INJECTED from /Users/abel/Desktop/rpcswatch/Wearable/src/main/AndroidManifest.xml
 	android:versionCode
-		INJECTED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml
-		ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:17:1-51:12
-		INJECTED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml
+		INJECTED from /Users/abel/Desktop/rpcswatch/Wearable/src/main/AndroidManifest.xml
+		ADDED from /Users/abel/Desktop/rpcswatch/Wearable/src/main/AndroidManifest.xml:17:1-56:12
+		INJECTED from /Users/abel/Desktop/rpcswatch/Wearable/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:17:11-69
+		ADDED from /Users/abel/Desktop/rpcswatch/Wearable/src/main/AndroidManifest.xml:17:11-69
 uses-feature#android.hardware.type.watch
-ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:20:5-64
+ADDED from /Users/abel/Desktop/rpcswatch/Wearable/src/main/AndroidManifest.xml:20:5-64
 	android:name
-		ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:20:19-61
+		ADDED from /Users/abel/Desktop/rpcswatch/Wearable/src/main/AndroidManifest.xml:20:19-61
 uses-permission#android.permission.BODY_SENSORS
-ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:22:5-71
+ADDED from /Users/abel/Desktop/rpcswatch/Wearable/src/main/AndroidManifest.xml:22:5-71
 	android:name
-		ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:22:22-68
+		ADDED from /Users/abel/Desktop/rpcswatch/Wearable/src/main/AndroidManifest.xml:22:22-68
+uses-permission#android.permission.WAKE_LOCK
+ADDED from /Users/abel/Desktop/rpcswatch/Wearable/src/main/AndroidManifest.xml:23:5-67
+	android:name
+		ADDED from /Users/abel/Desktop/rpcswatch/Wearable/src/main/AndroidManifest.xml:23:22-65
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from /Users/abel/Desktop/rpcswatch/Wearable/src/main/AndroidManifest.xml:24:5-78
+	android:name
+		ADDED from /Users/abel/Desktop/rpcswatch/Wearable/src/main/AndroidManifest.xml:24:22-76
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from /Users/abel/Desktop/rpcswatch/Wearable/src/main/AndroidManifest.xml:25:5-80
+	android:name
+		ADDED from /Users/abel/Desktop/rpcswatch/Wearable/src/main/AndroidManifest.xml:25:22-78
+uses-permission#android.permission.INTERNET
+ADDED from /Users/abel/Desktop/rpcswatch/Wearable/src/main/AndroidManifest.xml:26:5-66
+	android:name
+		ADDED from /Users/abel/Desktop/rpcswatch/Wearable/src/main/AndroidManifest.xml:26:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from /Users/abel/Desktop/rpcswatch/Wearable/src/main/AndroidManifest.xml:27:5-78
+	android:name
+		ADDED from /Users/abel/Desktop/rpcswatch/Wearable/src/main/AndroidManifest.xml:27:22-76
 application
-ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:24:5-49:19
-MERGED from [com.google.android.gms:play-services-wearable:16.0.1] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\31d3fdd865eb93a1ca32d97da4a9db05\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-wearable:16.0.1] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\31d3fdd865eb93a1ca32d97da4a9db05\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.support:wearable:2.4.0] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\3703ccb63c44cfbfd4586d9e6977c8f8\AndroidManifest.xml:9:5-13:19
-MERGED from [com.google.android.support:wearable:2.4.0] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\3703ccb63c44cfbfd4586d9e6977c8f8\AndroidManifest.xml:9:5-13:19
-MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\2b7e2c2b706c6dc5f34b16d936cfc25e\AndroidManifest.xml:22:5-27:19
-MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\2b7e2c2b706c6dc5f34b16d936cfc25e\AndroidManifest.xml:22:5-27:19
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\dabe47e5aa8cc581b152c898cd74a335\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\dabe47e5aa8cc581b152c898cd74a335\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\5f9416f025c8f83607ca59394a347e81\AndroidManifest.xml:22:5-26:19
-MERGED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\5f9416f025c8f83607ca59394a347e81\AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:recyclerview-v7:26.0.2] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\b059fc0adc7a2f62c7f5963664b8e75e\AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:recyclerview-v7:26.0.2] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\b059fc0adc7a2f62c7f5963664b8e75e\AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:percent:26.0.2] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\2b773be9ff6f66a49de1e1a69db6ac1f\AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:percent:26.0.2] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\2b773be9ff6f66a49de1e1a69db6ac1f\AndroidManifest.xml:22:5-26:19
+ADDED from /Users/abel/Desktop/rpcswatch/Wearable/src/main/AndroidManifest.xml:29:5-54:19
+MERGED from [com.google.android.gms:play-services-wearable:16.0.1] /Users/abel/.gradle/caches/transforms-2/files-2.1/4e09429a431d64a208a54ac1739c57e7/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-wearable:16.0.1] /Users/abel/.gradle/caches/transforms-2/files-2.1/4e09429a431d64a208a54ac1739c57e7/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.support:wearable:2.4.0] /Users/abel/.gradle/caches/transforms-2/files-2.1/31028061f3a7f187490140e154a65e48/AndroidManifest.xml:9:5-13:19
+MERGED from [com.google.android.support:wearable:2.4.0] /Users/abel/.gradle/caches/transforms-2/files-2.1/31028061f3a7f187490140e154a65e48/AndroidManifest.xml:9:5-13:19
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /Users/abel/.gradle/caches/transforms-2/files-2.1/62e66d087c3668b200f95a9dcb4177ae/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /Users/abel/.gradle/caches/transforms-2/files-2.1/62e66d087c3668b200f95a9dcb4177ae/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /Users/abel/.gradle/caches/transforms-2/files-2.1/4127ae8345c418f320a93642a619c090/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /Users/abel/.gradle/caches/transforms-2/files-2.1/4127ae8345c418f320a93642a619c090/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] /Users/abel/.gradle/caches/transforms-2/files-2.1/7f6b0f00896df326944b6ebcae4e1998/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] /Users/abel/.gradle/caches/transforms-2/files-2.1/7f6b0f00896df326944b6ebcae4e1998/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:recyclerview-v7:26.0.2] /Users/abel/.gradle/caches/transforms-2/files-2.1/24be7a8abb5825e58ac4d8ee5d776126/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:recyclerview-v7:26.0.2] /Users/abel/.gradle/caches/transforms-2/files-2.1/24be7a8abb5825e58ac4d8ee5d776126/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:percent:26.0.2] /Users/abel/.gradle/caches/transforms-2/files-2.1/6d0184891bb127745304145f89dc82e8/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:percent:26.0.2] /Users/abel/.gradle/caches/transforms-2/files-2.1/6d0184891bb127745304145f89dc82e8/AndroidManifest.xml:22:5-26:19
 	android:label
-		ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:28:13-45
+		ADDED from /Users/abel/Desktop/rpcswatch/Wearable/src/main/AndroidManifest.xml:33:13-45
 	android:icon
-		ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:27:13-49
+		ADDED from /Users/abel/Desktop/rpcswatch/Wearable/src/main/AndroidManifest.xml:32:13-49
 	android:allowBackup
-		ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:26:13-39
+		ADDED from /Users/abel/Desktop/rpcswatch/Wearable/src/main/AndroidManifest.xml:31:13-39
 	android:theme
-		ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:29:13-63
+		ADDED from /Users/abel/Desktop/rpcswatch/Wearable/src/main/AndroidManifest.xml:34:13-63
 	android:name
-		ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:25:13-34
+		ADDED from /Users/abel/Desktop/rpcswatch/Wearable/src/main/AndroidManifest.xml:30:13-34
 activity#com.example.android.google.wearable.app.MainActivity
-ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:30:9-41:20
+ADDED from /Users/abel/Desktop/rpcswatch/Wearable/src/main/AndroidManifest.xml:35:9-46:20
 	android:label
-		ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:32:13-45
+		ADDED from /Users/abel/Desktop/rpcswatch/Wearable/src/main/AndroidManifest.xml:37:13-45
 	android:name
-		ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:31:13-41
+		ADDED from /Users/abel/Desktop/rpcswatch/Wearable/src/main/AndroidManifest.xml:36:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:33:13-36:29
+ADDED from /Users/abel/Desktop/rpcswatch/Wearable/src/main/AndroidManifest.xml:38:13-41:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:34:17-68
+ADDED from /Users/abel/Desktop/rpcswatch/Wearable/src/main/AndroidManifest.xml:39:17-68
 	android:name
-		ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:34:25-66
+		ADDED from /Users/abel/Desktop/rpcswatch/Wearable/src/main/AndroidManifest.xml:39:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:35:17-76
+ADDED from /Users/abel/Desktop/rpcswatch/Wearable/src/main/AndroidManifest.xml:40:17-76
 	android:name
-		ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:35:27-74
+		ADDED from /Users/abel/Desktop/rpcswatch/Wearable/src/main/AndroidManifest.xml:40:27-74
 intent-filter#action:name:com.google.android.clockwork.example.SKELETON+category:name:android.intent.category.DEFAULT
-ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:37:13-40:29
+ADDED from /Users/abel/Desktop/rpcswatch/Wearable/src/main/AndroidManifest.xml:42:13-45:29
 action#com.google.android.clockwork.example.SKELETON
-ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:38:17-87
+ADDED from /Users/abel/Desktop/rpcswatch/Wearable/src/main/AndroidManifest.xml:43:17-87
 	android:name
-		ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:38:25-85
+		ADDED from /Users/abel/Desktop/rpcswatch/Wearable/src/main/AndroidManifest.xml:43:25-85
 category#android.intent.category.DEFAULT
-ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:39:17-75
+ADDED from /Users/abel/Desktop/rpcswatch/Wearable/src/main/AndroidManifest.xml:44:17-75
 	android:name
-		ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:39:27-73
+		ADDED from /Users/abel/Desktop/rpcswatch/Wearable/src/main/AndroidManifest.xml:44:27-73
 activity#com.example.android.google.wearable.app.GridExampleActivity
-ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:42:9-48:20
+ADDED from /Users/abel/Desktop/rpcswatch/Wearable/src/main/AndroidManifest.xml:47:9-53:20
 	android:name
-		ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:43:13-48
+		ADDED from /Users/abel/Desktop/rpcswatch/Wearable/src/main/AndroidManifest.xml:48:13-48
 intent-filter#action:name:com.example.android.google.wearable.app.GRID_ACTIVITY+category:name:android.intent.category.DEFAULT
-ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:44:13-47:29
+ADDED from /Users/abel/Desktop/rpcswatch/Wearable/src/main/AndroidManifest.xml:49:13-52:29
 action#com.example.android.google.wearable.app.GRID_ACTIVITY
-ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:45:17-95
+ADDED from /Users/abel/Desktop/rpcswatch/Wearable/src/main/AndroidManifest.xml:50:17-95
 	android:name
-		ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml:45:25-93
+		ADDED from /Users/abel/Desktop/rpcswatch/Wearable/src/main/AndroidManifest.xml:50:25-93
 uses-sdk
-INJECTED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml
-INJECTED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml
-MERGED from [com.google.android.gms:play-services-wearable:16.0.1] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\31d3fdd865eb93a1ca32d97da4a9db05\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-wearable:16.0.1] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\31d3fdd865eb93a1ca32d97da4a9db05\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v13:27.1.1] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\0aea0ad678682b8328e59a006bc296b9\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v13:27.1.1] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\0aea0ad678682b8328e59a006bc296b9\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.support:wearable:2.4.0] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\3703ccb63c44cfbfd4586d9e6977c8f8\AndroidManifest.xml:5:5-7:41
-MERGED from [com.google.android.support:wearable:2.4.0] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\3703ccb63c44cfbfd4586d9e6977c8f8\AndroidManifest.xml:5:5-7:41
-MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\2b7e2c2b706c6dc5f34b16d936cfc25e\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\2b7e2c2b706c6dc5f34b16d936cfc25e\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\dabe47e5aa8cc581b152c898cd74a335\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\dabe47e5aa8cc581b152c898cd74a335\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\5f9416f025c8f83607ca59394a347e81\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\5f9416f025c8f83607ca59394a347e81\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:26.0.2] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\b059fc0adc7a2f62c7f5963664b8e75e\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:26.0.2] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\b059fc0adc7a2f62c7f5963664b8e75e\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:27.1.1] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\d3dda7ba9f00f76ae273285f9c36f481\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:27.1.1] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\d3dda7ba9f00f76ae273285f9c36f481\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:percent:26.0.2] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\2b773be9ff6f66a49de1e1a69db6ac1f\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:percent:26.0.2] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\2b773be9ff6f66a49de1e1a69db6ac1f\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\27a358808785fa81646360da1de7b86a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:27.1.1] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\27a358808785fa81646360da1de7b86a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\284e8280b936a3a94838fa950e0d8df3\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:27.1.1] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\284e8280b936a3a94838fa950e0d8df3\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\26050f5fb07a3e8fb6e856438c81e51a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:27.1.1] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\26050f5fb07a3e8fb6e856438c81e51a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\9397e6c158e3e241b8df55f429e4e570\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:27.1.1] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\9397e6c158e3e241b8df55f429e4e570\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.1.1] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\8e906cd85f1fdcfd79755d1f2a176d3a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:27.1.1] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\8e906cd85f1fdcfd79755d1f2a176d3a\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\129e46d160ad2313198796d8849033a3\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.0] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\129e46d160ad2313198796d8849033a3\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\5fce130a17a815d973d172796df80d92\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.0] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\5fce130a17a815d973d172796df80d92\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\af719d89901e34f114211927101de311\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.0] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\af719d89901e34f114211927101de311\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.0] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\e15e450efcae2591c3d26bf6b0af36cc\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.0] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\e15e450efcae2591c3d26bf6b0af36cc\AndroidManifest.xml:20:5-44
-INJECTED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml
-INJECTED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml
+INJECTED from /Users/abel/Desktop/rpcswatch/Wearable/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/abel/Desktop/rpcswatch/Wearable/src/main/AndroidManifest.xml
+INJECTED from /Users/abel/Desktop/rpcswatch/Wearable/src/main/AndroidManifest.xml
+MERGED from [com.google.android.gms:play-services-wearable:16.0.1] /Users/abel/.gradle/caches/transforms-2/files-2.1/4e09429a431d64a208a54ac1739c57e7/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-wearable:16.0.1] /Users/abel/.gradle/caches/transforms-2/files-2.1/4e09429a431d64a208a54ac1739c57e7/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v13:27.1.1] /Users/abel/.gradle/caches/transforms-2/files-2.1/509804424771073609bdeca453cbd83e/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v13:27.1.1] /Users/abel/.gradle/caches/transforms-2/files-2.1/509804424771073609bdeca453cbd83e/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.support:wearable:2.4.0] /Users/abel/.gradle/caches/transforms-2/files-2.1/31028061f3a7f187490140e154a65e48/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.support:wearable:2.4.0] /Users/abel/.gradle/caches/transforms-2/files-2.1/31028061f3a7f187490140e154a65e48/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /Users/abel/.gradle/caches/transforms-2/files-2.1/62e66d087c3668b200f95a9dcb4177ae/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:16.0.1] /Users/abel/.gradle/caches/transforms-2/files-2.1/62e66d087c3668b200f95a9dcb4177ae/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /Users/abel/.gradle/caches/transforms-2/files-2.1/4127ae8345c418f320a93642a619c090/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:16.0.1] /Users/abel/.gradle/caches/transforms-2/files-2.1/4127ae8345c418f320a93642a619c090/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] /Users/abel/.gradle/caches/transforms-2/files-2.1/7f6b0f00896df326944b6ebcae4e1998/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:16.0.1] /Users/abel/.gradle/caches/transforms-2/files-2.1/7f6b0f00896df326944b6ebcae4e1998/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:26.0.2] /Users/abel/.gradle/caches/transforms-2/files-2.1/24be7a8abb5825e58ac4d8ee5d776126/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:26.0.2] /Users/abel/.gradle/caches/transforms-2/files-2.1/24be7a8abb5825e58ac4d8ee5d776126/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] /Users/abel/.gradle/caches/transforms-2/files-2.1/35b0e1b98f69262cdd3a276e17759095/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.1.1] /Users/abel/.gradle/caches/transforms-2/files-2.1/35b0e1b98f69262cdd3a276e17759095/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:percent:26.0.2] /Users/abel/.gradle/caches/transforms-2/files-2.1/6d0184891bb127745304145f89dc82e8/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:percent:26.0.2] /Users/abel/.gradle/caches/transforms-2/files-2.1/6d0184891bb127745304145f89dc82e8/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] /Users/abel/.gradle/caches/transforms-2/files-2.1/0c6a84e5ce39b23f88511b341f973acd/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.1.1] /Users/abel/.gradle/caches/transforms-2/files-2.1/0c6a84e5ce39b23f88511b341f973acd/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/abel/.gradle/caches/transforms-2/files-2.1/b255b9085734b517cc3f4ab8b3ac0269/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/abel/.gradle/caches/transforms-2/files-2.1/b255b9085734b517cc3f4ab8b3ac0269/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/abel/.gradle/caches/transforms-2/files-2.1/19422603d9abc1c5fefb404581dc6586/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/abel/.gradle/caches/transforms-2/files-2.1/19422603d9abc1c5fefb404581dc6586/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/abel/.gradle/caches/transforms-2/files-2.1/3abc0e3d7f58e707e4a1ec54e4038791/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/abel/.gradle/caches/transforms-2/files-2.1/3abc0e3d7f58e707e4a1ec54e4038791/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /Users/abel/.gradle/caches/transforms-2/files-2.1/cae81d9a1ae1062e4ffd8b054eb4a4d4/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /Users/abel/.gradle/caches/transforms-2/files-2.1/cae81d9a1ae1062e4ffd8b054eb4a4d4/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/abel/.gradle/caches/transforms-2/files-2.1/a1d7b0eeb616c0886f8806a0c43c9d4f/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/abel/.gradle/caches/transforms-2/files-2.1/a1d7b0eeb616c0886f8806a0c43c9d4f/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/abel/.gradle/caches/transforms-2/files-2.1/1953c08cc7b80e3e0122b2d3bb1d8fd6/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/abel/.gradle/caches/transforms-2/files-2.1/1953c08cc7b80e3e0122b2d3bb1d8fd6/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/abel/.gradle/caches/transforms-2/files-2.1/66204346ab097108ea7a30df61f47742/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/abel/.gradle/caches/transforms-2/files-2.1/66204346ab097108ea7a30df61f47742/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /Users/abel/.gradle/caches/transforms-2/files-2.1/408ffd4c38597075b1504b477038f892/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /Users/abel/.gradle/caches/transforms-2/files-2.1/408ffd4c38597075b1504b477038f892/AndroidManifest.xml:20:5-44
+INJECTED from /Users/abel/Desktop/rpcswatch/Wearable/src/main/AndroidManifest.xml
+INJECTED from /Users/abel/Desktop/rpcswatch/Wearable/src/main/AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml
-		ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml
+		INJECTED from /Users/abel/Desktop/rpcswatch/Wearable/src/main/AndroidManifest.xml
+		ADDED from /Users/abel/Desktop/rpcswatch/Wearable/src/main/AndroidManifest.xml
+		INJECTED from /Users/abel/Desktop/rpcswatch/Wearable/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml
-		ADDED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\akshatp\Desktop\JuniorSpring\RPCS\rpcs\Wearable\src\main\AndroidManifest.xml
+		INJECTED from /Users/abel/Desktop/rpcswatch/Wearable/src/main/AndroidManifest.xml
+		ADDED from /Users/abel/Desktop/rpcswatch/Wearable/src/main/AndroidManifest.xml
+		INJECTED from /Users/abel/Desktop/rpcswatch/Wearable/src/main/AndroidManifest.xml
 uses-library#com.google.android.wearable
-ADDED from [com.google.android.support:wearable:2.4.0] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\3703ccb63c44cfbfd4586d9e6977c8f8\AndroidManifest.xml:10:9-12:40
+ADDED from [com.google.android.support:wearable:2.4.0] /Users/abel/.gradle/caches/transforms-2/files-2.1/31028061f3a7f187490140e154a65e48/AndroidManifest.xml:10:9-12:40
 	android:required
-		ADDED from [com.google.android.support:wearable:2.4.0] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\3703ccb63c44cfbfd4586d9e6977c8f8\AndroidManifest.xml:12:13-37
+		ADDED from [com.google.android.support:wearable:2.4.0] /Users/abel/.gradle/caches/transforms-2/files-2.1/31028061f3a7f187490140e154a65e48/AndroidManifest.xml:12:13-37
 	android:name
-		ADDED from [com.google.android.support:wearable:2.4.0] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\3703ccb63c44cfbfd4586d9e6977c8f8\AndroidManifest.xml:11:13-55
+		ADDED from [com.google.android.support:wearable:2.4.0] /Users/abel/.gradle/caches/transforms-2/files-2.1/31028061f3a7f187490140e154a65e48/AndroidManifest.xml:11:13-55
 activity#com.google.android.gms.common.api.GoogleApiActivity
-ADDED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\2b7e2c2b706c6dc5f34b16d936cfc25e\AndroidManifest.xml:23:9-26:75
+ADDED from [com.google.android.gms:play-services-base:16.0.1] /Users/abel/.gradle/caches/transforms-2/files-2.1/62e66d087c3668b200f95a9dcb4177ae/AndroidManifest.xml:23:9-26:75
 	android:exported
-		ADDED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\2b7e2c2b706c6dc5f34b16d936cfc25e\AndroidManifest.xml:25:13-37
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] /Users/abel/.gradle/caches/transforms-2/files-2.1/62e66d087c3668b200f95a9dcb4177ae/AndroidManifest.xml:25:13-37
 	android:theme
-		ADDED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\2b7e2c2b706c6dc5f34b16d936cfc25e\AndroidManifest.xml:26:13-72
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] /Users/abel/.gradle/caches/transforms-2/files-2.1/62e66d087c3668b200f95a9dcb4177ae/AndroidManifest.xml:26:13-72
 	android:name
-		ADDED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\2b7e2c2b706c6dc5f34b16d936cfc25e\AndroidManifest.xml:24:13-79
+		ADDED from [com.google.android.gms:play-services-base:16.0.1] /Users/abel/.gradle/caches/transforms-2/files-2.1/62e66d087c3668b200f95a9dcb4177ae/AndroidManifest.xml:24:13-79
 meta-data#com.google.android.gms.version
-ADDED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\5f9416f025c8f83607ca59394a347e81\AndroidManifest.xml:23:9-25:69
+ADDED from [com.google.android.gms:play-services-basement:16.0.1] /Users/abel/.gradle/caches/transforms-2/files-2.1/7f6b0f00896df326944b6ebcae4e1998/AndroidManifest.xml:23:9-25:69
 	android:value
-		ADDED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\5f9416f025c8f83607ca59394a347e81\AndroidManifest.xml:25:13-66
+		ADDED from [com.google.android.gms:play-services-basement:16.0.1] /Users/abel/.gradle/caches/transforms-2/files-2.1/7f6b0f00896df326944b6ebcae4e1998/AndroidManifest.xml:25:13-66
 	android:name
-		ADDED from [com.google.android.gms:play-services-basement:16.0.1] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\5f9416f025c8f83607ca59394a347e81\AndroidManifest.xml:24:13-58
+		ADDED from [com.google.android.gms:play-services-basement:16.0.1] /Users/abel/.gradle/caches/transforms-2/files-2.1/7f6b0f00896df326944b6ebcae4e1998/AndroidManifest.xml:24:13-58
 meta-data#android.support.VERSION
-ADDED from [com.android.support:recyclerview-v7:26.0.2] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\b059fc0adc7a2f62c7f5963664b8e75e\AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:percent:26.0.2] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\2b773be9ff6f66a49de1e1a69db6ac1f\AndroidManifest.xml:23:9-25:38
-MERGED from [com.android.support:percent:26.0.2] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\2b773be9ff6f66a49de1e1a69db6ac1f\AndroidManifest.xml:23:9-25:38
+ADDED from [com.android.support:recyclerview-v7:26.0.2] /Users/abel/.gradle/caches/transforms-2/files-2.1/24be7a8abb5825e58ac4d8ee5d776126/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:percent:26.0.2] /Users/abel/.gradle/caches/transforms-2/files-2.1/6d0184891bb127745304145f89dc82e8/AndroidManifest.xml:23:9-25:38
+MERGED from [com.android.support:percent:26.0.2] /Users/abel/.gradle/caches/transforms-2/files-2.1/6d0184891bb127745304145f89dc82e8/AndroidManifest.xml:23:9-25:38
 	android:value
-		ADDED from [com.android.support:recyclerview-v7:26.0.2] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\b059fc0adc7a2f62c7f5963664b8e75e\AndroidManifest.xml:25:13-35
+		ADDED from [com.android.support:recyclerview-v7:26.0.2] /Users/abel/.gradle/caches/transforms-2/files-2.1/24be7a8abb5825e58ac4d8ee5d776126/AndroidManifest.xml:25:13-35
 	android:name
-		ADDED from [com.android.support:recyclerview-v7:26.0.2] C:\Users\akshatp\.gradle\caches\transforms-2\files-2.1\b059fc0adc7a2f62c7f5963664b8e75e\AndroidManifest.xml:24:13-51
+		ADDED from [com.android.support:recyclerview-v7:26.0.2] /Users/abel/.gradle/caches/transforms-2/files-2.1/24be7a8abb5825e58ac4d8ee5d776126/AndroidManifest.xml:24:13-51

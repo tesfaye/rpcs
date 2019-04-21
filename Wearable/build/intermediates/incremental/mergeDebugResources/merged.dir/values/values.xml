@@ -5,6 +5,7 @@
 <item>#FF4285F4</item>
 <item>#FF0F9D58</item>
 </array>
+    <attr format="reference" name="coordinatorLayoutStyle"/>
     <bool name="action_choose_expand_selected">true</bool>
     <bool name="action_choose_symmetrical_dimen">false</bool>
     <color name="action_button_background">#4D000000</color>
@@ -60,115 +61,6 @@
     <color name="secondary_text_light">#9E9E9E</color>
     <color name="semitransparent_grey">#66777777</color>
     <color name="white">#FFFFFF</color>
-    <declare-styleable name="AcceptDenyDialogPreference"><attr format="string" name="dialogTitle"/><attr format="string" name="dialogMessage"/><attr format="reference" name="dialogIcon"/><attr format="boolean" name="showPositiveDialogButton"/><attr format="boolean" name="showNegativeDialogButton"/></declare-styleable>
-    <declare-styleable name="AcceptDenySwitchPreference"><attr name="dialogTitle"/><attr name="dialogMessage"/><attr name="dialogIcon"/><attr name="showPositiveDialogButton"/><attr name="showNegativeDialogButton"/><attr format="boolean" name="showDialogWhenTurningOn"/><attr format="boolean" name="showDialogWhenTurningOff"/></declare-styleable>
-    <declare-styleable name="ActionLabel"><attr name="android:textColor"/><attr name="android:maxLines"/><attr name="android:fontFamily"/><attr name="android:typeface"/><attr name="android:textStyle"/><attr name="android:text"/><attr name="android:gravity"/><attr name="android:lineSpacingExtra"/><attr name="android:lineSpacingMultiplier"/><attr format="dimension" name="minTextSize"/><attr format="dimension" name="maxTextSize"/></declare-styleable>
-    <declare-styleable name="ActionPage"><attr name="android:src"/><attr name="android:color"/><attr name="buttonRippleColor"/><attr name="android:elevation"/><attr name="android:stateListAnimator"/><attr name="pressedButtonTranslationZ"/><attr name="android:textColor"/><attr name="android:maxLines"/><attr name="android:fontFamily"/><attr name="android:typeface"/><attr name="android:textStyle"/><attr name="android:text"/><attr name="maxTextSize"/><attr name="minTextSize"/><attr name="android:gravity"/><attr name="imageScaleMode"/><attr name="android:lineSpacingExtra"/><attr name="android:lineSpacingMultiplier"/></declare-styleable>
-    <declare-styleable name="BoxInsetLayout_Layout"><attr name="layout_box">
-<flag name="left" value="0x01"/>
-<flag name="top" value="0x02"/>
-<flag name="right" value="0x04"/>
-<flag name="bottom" value="0x08"/>
-<flag name="all" value="0x0F"/>
-</attr></declare-styleable>
-    <declare-styleable name="CircledImageView"><attr name="android:src"/><attr format="color" name="circle_color"/><attr format="dimension" name="circle_radius"/><attr format="dimension" name="circle_radius_pressed"/><attr format="dimension" name="circle_border_width"/><attr format="color" name="circle_border_color"/><attr name="circle_border_cap">
-<enum name="butt" value="0"/>
-
-<enum name="round" value="1"/>
-
-<enum name="square" value="2"/>
-
-</attr><attr format="dimension" name="circle_padding"/><attr format="dimension" name="shadow_width"/><attr format="dimension" name="image_circle_percentage"/><attr format="dimension" name="image_horizontal_offcenter_percentage"/><attr format="color" name="image_tint"/><attr format="fraction" name="circle_radius_percent"/><attr format="fraction" name="circle_radius_pressed_percent"/><attr name="square_dimen">
-<enum name="none" value="0"/>
-
-<enum name="height" value="1"/>
-
-<enum name="width" value="2"/>
-
-</attr></declare-styleable>
-    <declare-styleable name="CircularButton"><attr name="android:src"/><attr name="imageScaleMode">
-<enum name="fit" value="0"/>
-
-<enum name="center" value="1"/>
-
-</attr><attr name="android:color"/><attr name="android:clickable"/><attr format="color|reference" name="buttonRippleColor"/><attr name="android:elevation"/><attr name="android:stateListAnimator"/><attr format="dimension" name="pressedButtonTranslationZ"/></declare-styleable>
-    <declare-styleable name="ComplicationDrawable"><attr format="color" name="backgroundColor"/><attr format="reference" name="backgroundDrawable"/><attr format="color" name="textColor"/><attr format="color" name="titleColor"/><attr format="string" name="textTypeface"/><attr format="string" name="titleTypeface"/><attr format="dimension" name="textSize"/><attr format="dimension" name="titleSize"/><attr format="color" name="iconColor"/><attr format="color" name="borderColor"/><attr format="dimension" name="borderRadius"/><attr name="borderStyle">
-<enum name="none" value="0"/>
-
-<enum name="solid" value="1"/>
-
-<enum name="dashed" value="2"/>
-
-</attr><attr format="dimension" name="borderDashWidth"/><attr format="dimension" name="borderDashGap"/><attr format="dimension" name="borderWidth"/><attr format="dimension" name="rangedValueRingWidth"/><attr format="color" name="rangedValuePrimaryColor"/><attr format="color" name="rangedValueSecondaryColor"/><attr format="boolean" name="rangedValueProgressHidden"/><attr format="color" name="highlightColor"/></declare-styleable>
-    <declare-styleable name="DelayedConfirmationView"><attr format="integer" name="update_interval"/></declare-styleable>
-    <declare-styleable name="DotsPageIndicator"><attr format="dimension" name="dotSpacing"/><attr format="dimension" name="dotRadius"/><attr format="dimension" name="dotRadiusSelected"/><attr format="color" name="dotColor"/><attr format="color" name="dotColorSelected"/><attr format="boolean" name="dotFadeWhenIdle"/><attr format="integer" name="dotFadeOutDelay"/><attr format="integer" name="dotFadeOutDuration"/><attr format="integer" name="dotFadeInDuration"/><attr format="color" name="dotShadowColor"/><attr format="dimension" name="dotShadowRadius"/><attr format="dimension" name="dotShadowDx"/><attr format="dimension" name="dotShadowDy"/></declare-styleable>
-    <declare-styleable name="FontFamily"><attr format="string" name="fontProviderAuthority"/><attr format="string" name="fontProviderPackage"/><attr format="string" name="fontProviderQuery"/><attr format="reference" name="fontProviderCerts"/><attr name="fontProviderFetchStrategy">
-            
-            <enum name="blocking" value="0"/>
-            
-            <enum name="async" value="1"/>
-        </attr><attr format="integer" name="fontProviderFetchTimeout">
-          
-            <enum name="forever" value="-1"/>
-        </attr></declare-styleable>
-    <declare-styleable name="FontFamilyFont"><attr name="fontStyle">
-            <enum name="normal" value="0"/>
-            <enum name="italic" value="1"/>
-        </attr><attr format="reference" name="font"/><attr format="integer" name="fontWeight"/><attr name="android:fontStyle"/><attr name="android:font"/><attr name="android:fontWeight"/></declare-styleable>
-    <declare-styleable name="LoadingImageView"><attr name="imageAspectRatioAdjust">
-<enum name="none" value="0"/>
-
-<enum name="adjust_width" value="1"/>
-
-<enum name="adjust_height" value="2"/>
-
-</attr><attr format="float" name="imageAspectRatio"/><attr format="boolean" name="circleCrop"/></declare-styleable>
-    <declare-styleable name="PageIndicatorView"><attr format="dimension" name="pageIndicatorDotSpacing"/><attr format="dimension" name="pageIndicatorDotRadius"/><attr format="dimension" name="pageIndicatorDotRadiusSelected"/><attr format="color" name="pageIndicatorDotColor"/><attr format="color" name="pageIndicatorDotColorSelected"/><attr format="boolean" name="pageIndicatorDotFadeWhenIdle"/><attr format="integer" name="pageIndicatorDotFadeOutDelay"/><attr format="integer" name="pageIndicatorDotFadeOutDuration"/><attr format="integer" name="pageIndicatorDotFadeInDuration"/><attr format="color" name="pageIndicatorDotShadowColor"/><attr format="dimension" name="pageIndicatorDotShadowRadius"/><attr format="dimension" name="pageIndicatorDotShadowDx"/><attr format="dimension" name="pageIndicatorDotShadowDy"/></declare-styleable>
-    <declare-styleable name="PercentLayout_Layout"><attr format="fraction" name="layout_widthPercent"/><attr format="fraction" name="layout_heightPercent"/><attr format="fraction" name="layout_marginPercent"/><attr format="fraction" name="layout_marginLeftPercent"/><attr format="fraction" name="layout_marginTopPercent"/><attr format="fraction" name="layout_marginRightPercent"/><attr format="fraction" name="layout_marginBottomPercent"/><attr format="fraction" name="layout_marginStartPercent"/><attr format="fraction" name="layout_marginEndPercent"/><attr format="fraction" name="layout_aspectRatio"/></declare-styleable>
-    <declare-styleable name="ProgressSpinner"><attr format="color|reference" name="color_sequence"/></declare-styleable>
-    <declare-styleable name="RecyclerView"><attr format="string" name="layoutManager"/><attr name="android:orientation"/><attr name="android:descendantFocusability"/><attr format="integer" name="spanCount"/><attr format="boolean" name="reverseLayout"/><attr format="boolean" name="stackFromEnd"/><attr format="boolean" name="fastScrollEnabled"/><attr format="reference" name="fastScrollVerticalThumbDrawable"/><attr format="reference" name="fastScrollVerticalTrackDrawable"/><attr format="reference" name="fastScrollHorizontalThumbDrawable"/><attr format="reference" name="fastScrollHorizontalTrackDrawable"/></declare-styleable>
-    <declare-styleable name="SignInButton"><attr format="reference" name="buttonSize">
-<enum name="standard" value="0"/>
-
-<enum name="wide" value="1"/>
-
-<enum name="icon_only" value="2"/>
-
-</attr><attr format="reference" name="colorScheme">
-<enum name="dark" value="0"/>
-
-<enum name="light" value="1"/>
-
-<enum name="auto" value="2"/>
-
-</attr><attr format="reference|string" name="scopeUris"/></declare-styleable>
-    <declare-styleable name="WatchViewStub"><attr format="reference" name="rectLayout"/><attr format="reference" name="roundLayout"/></declare-styleable>
-    <declare-styleable name="WearableActionDrawer"><attr format="reference" name="action_menu"/><attr format="string" name="drawer_title"/><attr format="boolean" name="show_overflow_in_peek"/></declare-styleable>
-    <declare-styleable name="WearableDialogPreference"><attr format="string" name="neutralButtonText"/><attr format="reference" name="positiveButtonIcon"/><attr format="reference" name="neutralButtonIcon"/><attr format="reference" name="negativeButtonIcon"/></declare-styleable>
-    <declare-styleable name="WearableDrawerView"><attr format="reference" name="peek_view"/><attr format="reference" name="drawer_content"/></declare-styleable>
-    <declare-styleable name="WearableFrameLayout"><attr name="layout_gravityRound">
-<flag name="top" value="0x30"/>
-<flag name="bottom" value="0x50"/>
-<flag name="left" value="0x03"/>
-<flag name="right" value="0x05"/>
-<flag name="center_vertical" value="0x10"/>
-<flag name="fill_vertical" value="0x70"/>
-<flag name="center_horizontal" value="0x01"/>
-<flag name="fill_horizontal" value="0x07"/>
-<flag name="center" value="0x11"/>
-<flag name="fill" value="0x77"/>
-<flag name="clip_vertical" value="0x80"/>
-<flag name="clip_horizontal" value="0x08"/>
-<flag name="start" value="0x00800003"/>
-<flag name="end" value="0x00800005"/>
-</attr><attr format="dimension" name="layout_widthRound"/><attr format="dimension" name="layout_heightRound"/><attr format="dimension" name="layout_marginRound"/><attr format="dimension" name="layout_marginLeftRound"/><attr format="dimension" name="layout_marginTopRound"/><attr format="dimension" name="layout_marginRightRound"/><attr format="dimension" name="layout_marginBottomRound"/><attr name="android:foregroundGravity"/><attr name="android:foreground"/><attr name="android:measureAllChildren"/><attr name="android:foregroundTint"/></declare-styleable>
-    <declare-styleable name="WearableNavigationDrawer"><attr name="navigation_style">
-<enum name="single_page" value="0"/>
-
-<enum name="multi_page" value="1"/>
-
-</attr></declare-styleable>
-    <declare-styleable name="WearableRecyclerView"><attr format="fraction" name="bezel_width"/><attr format="boolean" name="circular_scrolling_gesture_enabled"/><attr format="float" name="scroll_degrees_per_screen"/></declare-styleable>
     <item format="float" name="action_chooser_base_radius_percent" type="dimen">.25</item>
     <item format="float" name="action_chooser_bounce_in_percent" type="dimen">.1</item>
     <item format="float" name="action_chooser_icon_height_percent" type="dimen">.5</item>
@@ -292,7 +184,7 @@
     <integer name="cancel_button_image_alpha">127</integer>
     <integer name="complicationDrawable_borderStyle">1</integer>
     <integer name="complicationDrawable_highlightDurationMs">300</integer>
-    <integer name="google_play_services_version">11910000</integer>
+    <integer name="google_play_services_version">12451000</integer>
     <integer name="status_bar_notification_info_maxnum">999</integer>
     <plurals name="time_difference_short_days"><item quantity="one"><ns1:g id="number_of_days">%d</ns1:g>d</item>
 <item quantity="other"><ns1:g id="number_of_days">%d</ns1:g>d</item>
@@ -423,4 +315,461 @@
     <style name="TextAppearance.Compat.Notification.Title.Media"/>
     <style name="Widget.Compat.NotificationActionContainer" parent=""/>
     <style name="Widget.Compat.NotificationActionText" parent=""/>
+    <style name="Widget.Support.CoordinatorLayout" parent="android:Widget">
+        <item name="statusBarBackground">#000000</item>
+    </style>
+    <declare-styleable name="AcceptDenyDialogPreference">
+<attr format="string" name="dialogTitle"/>
+
+<attr format="string" name="dialogMessage"/>
+
+<attr format="reference" name="dialogIcon"/>
+
+<attr format="boolean" name="showPositiveDialogButton"/>
+
+<attr format="boolean" name="showNegativeDialogButton"/>
+</declare-styleable>
+    <declare-styleable name="AcceptDenySwitchPreference">
+<attr name="dialogTitle"/>
+
+<attr name="dialogMessage"/>
+
+<attr name="dialogIcon"/>
+
+<attr name="showPositiveDialogButton"/>
+
+<attr name="showNegativeDialogButton"/>
+
+<attr format="boolean" name="showDialogWhenTurningOn"/>
+
+<attr format="boolean" name="showDialogWhenTurningOff"/>
+</declare-styleable>
+    <declare-styleable name="ActionLabel">
+<attr name="android:textColor"/>
+
+<attr name="android:maxLines"/>
+
+<attr name="android:fontFamily"/>
+
+<attr name="android:typeface"/>
+
+<attr name="android:textStyle"/>
+
+<attr name="android:text"/>
+
+<attr name="android:gravity"/>
+
+<attr name="android:lineSpacingExtra"/>
+
+<attr name="android:lineSpacingMultiplier"/>
+
+<attr format="dimension" name="minTextSize"/>
+
+<attr format="dimension" name="maxTextSize"/>
+</declare-styleable>
+    <declare-styleable name="ActionPage">
+<attr name="android:src"/>
+
+<attr name="android:color"/>
+
+<attr name="buttonRippleColor"/>
+
+<attr name="android:elevation"/>
+
+<attr name="android:stateListAnimator"/>
+
+<attr name="pressedButtonTranslationZ"/>
+
+<attr name="android:textColor"/>
+
+<attr name="android:maxLines"/>
+
+<attr name="android:fontFamily"/>
+
+<attr name="android:typeface"/>
+
+<attr name="android:textStyle"/>
+
+<attr name="android:text"/>
+
+<attr name="maxTextSize"/>
+
+<attr name="minTextSize"/>
+
+<attr name="android:gravity"/>
+
+<attr name="imageScaleMode"/>
+
+<attr name="android:lineSpacingExtra"/>
+
+<attr name="android:lineSpacingMultiplier"/>
+</declare-styleable>
+    <declare-styleable name="BoxInsetLayout_Layout"><attr name="layout_box">
+<flag name="left" value="0x01"/>
+<flag name="top" value="0x02"/>
+<flag name="right" value="0x04"/>
+<flag name="bottom" value="0x08"/>
+<flag name="all" value="0x0F"/>
+</attr>
+</declare-styleable>
+    <declare-styleable name="CircledImageView">
+<attr name="android:src"/>
+
+<attr format="color" name="circle_color"/>
+
+<attr format="dimension" name="circle_radius"/>
+
+<attr format="dimension" name="circle_radius_pressed"/>
+
+<attr format="dimension" name="circle_border_width"/>
+
+<attr format="color" name="circle_border_color"/>
+<attr name="circle_border_cap">
+<enum name="butt" value="0"/>
+
+<enum name="round" value="1"/>
+
+<enum name="square" value="2"/>
+
+</attr>
+
+<attr format="dimension" name="circle_padding"/>
+
+<attr format="dimension" name="shadow_width"/>
+
+<attr format="dimension" name="image_circle_percentage"/>
+
+<attr format="dimension" name="image_horizontal_offcenter_percentage"/>
+
+<attr format="color" name="image_tint"/>
+
+<attr format="fraction" name="circle_radius_percent"/>
+
+<attr format="fraction" name="circle_radius_pressed_percent"/>
+<attr name="square_dimen">
+<enum name="none" value="0"/>
+
+<enum name="height" value="1"/>
+
+<enum name="width" value="2"/>
+
+</attr>
+</declare-styleable>
+    <declare-styleable name="CircularButton">
+<attr name="android:src"/>
+<attr name="imageScaleMode">
+<enum name="fit" value="0"/>
+
+<enum name="center" value="1"/>
+
+</attr>
+
+<attr name="android:color"/>
+
+<attr name="android:clickable"/>
+
+<attr format="color|reference" name="buttonRippleColor"/>
+
+<attr name="android:elevation"/>
+
+<attr name="android:stateListAnimator"/>
+
+<attr format="dimension" name="pressedButtonTranslationZ"/>
+</declare-styleable>
+    <declare-styleable name="ComplicationDrawable">
+<attr format="color" name="backgroundColor"/>
+
+<attr format="reference" name="backgroundDrawable"/>
+
+<attr format="color" name="textColor"/>
+
+<attr format="color" name="titleColor"/>
+
+<attr format="string" name="textTypeface"/>
+
+<attr format="string" name="titleTypeface"/>
+
+<attr format="dimension" name="textSize"/>
+
+<attr format="dimension" name="titleSize"/>
+
+<attr format="color" name="iconColor"/>
+
+<attr format="color" name="borderColor"/>
+
+<attr format="dimension" name="borderRadius"/>
+<attr name="borderStyle">
+<enum name="none" value="0"/>
+
+<enum name="solid" value="1"/>
+
+<enum name="dashed" value="2"/>
+
+</attr>
+
+<attr format="dimension" name="borderDashWidth"/>
+
+<attr format="dimension" name="borderDashGap"/>
+
+<attr format="dimension" name="borderWidth"/>
+
+<attr format="dimension" name="rangedValueRingWidth"/>
+
+<attr format="color" name="rangedValuePrimaryColor"/>
+
+<attr format="color" name="rangedValueSecondaryColor"/>
+
+<attr format="boolean" name="rangedValueProgressHidden"/>
+
+<attr format="color" name="highlightColor"/>
+</declare-styleable>
+    <declare-styleable name="CoordinatorLayout"><attr format="reference" name="keylines"/><attr format="color|reference" name="statusBarBackground"/></declare-styleable>
+    <declare-styleable name="CoordinatorLayout_Layout"><attr name="android:layout_gravity"/><attr format="string" name="layout_behavior"/><attr format="reference" name="layout_anchor"/><attr format="integer" name="layout_keyline"/><attr name="layout_anchorGravity">
+            
+            <flag name="top" value="0x30"/>
+            
+            <flag name="bottom" value="0x50"/>
+            
+            <flag name="left" value="0x03"/>
+            
+            <flag name="right" value="0x05"/>
+            
+            <flag name="center_vertical" value="0x10"/>
+            
+            <flag name="fill_vertical" value="0x70"/>
+            
+            <flag name="center_horizontal" value="0x01"/>
+            
+            <flag name="fill_horizontal" value="0x07"/>
+            
+            <flag name="center" value="0x11"/>
+            
+            <flag name="fill" value="0x77"/>
+            
+            <flag name="clip_vertical" value="0x80"/>
+            
+            <flag name="clip_horizontal" value="0x08"/>
+            
+            <flag name="start" value="0x00800003"/>
+            
+            <flag name="end" value="0x00800005"/>
+        </attr><attr format="enum" name="layout_insetEdge">
+            
+            <enum name="none" value="0x0"/>
+            
+            <enum name="top" value="0x30"/>
+            
+            <enum name="bottom" value="0x50"/>
+            
+            <enum name="left" value="0x03"/>
+            
+            <enum name="right" value="0x05"/>
+            
+            <enum name="start" value="0x00800003"/>
+            
+            <enum name="end" value="0x00800005"/>
+        </attr><attr name="layout_dodgeInsetEdges">
+            
+            <flag name="none" value="0x0"/>
+            
+            <flag name="top" value="0x30"/>
+            
+            <flag name="bottom" value="0x50"/>
+            
+            <flag name="left" value="0x03"/>
+            
+            <flag name="right" value="0x05"/>
+            
+            <flag name="start" value="0x00800003"/>
+            
+            <flag name="end" value="0x00800005"/>
+            
+            <flag name="all" value="0x77"/>
+        </attr></declare-styleable>
+    <declare-styleable name="DelayedConfirmationView">
+<attr format="integer" name="update_interval"/>
+</declare-styleable>
+    <declare-styleable name="DotsPageIndicator">
+<attr format="dimension" name="dotSpacing"/>
+
+<attr format="dimension" name="dotRadius"/>
+
+<attr format="dimension" name="dotRadiusSelected"/>
+
+<attr format="color" name="dotColor"/>
+
+<attr format="color" name="dotColorSelected"/>
+
+<attr format="boolean" name="dotFadeWhenIdle"/>
+
+<attr format="integer" name="dotFadeOutDelay"/>
+
+<attr format="integer" name="dotFadeOutDuration"/>
+
+<attr format="integer" name="dotFadeInDuration"/>
+
+<attr format="color" name="dotShadowColor"/>
+
+<attr format="dimension" name="dotShadowRadius"/>
+
+<attr format="dimension" name="dotShadowDx"/>
+
+<attr format="dimension" name="dotShadowDy"/>
+</declare-styleable>
+    <declare-styleable name="FontFamily"><attr format="string" name="fontProviderAuthority"/><attr format="string" name="fontProviderPackage"/><attr format="string" name="fontProviderQuery"/><attr format="reference" name="fontProviderCerts"/><attr name="fontProviderFetchStrategy">
+            
+            <enum name="blocking" value="0"/>
+            
+            <enum name="async" value="1"/>
+        </attr><attr format="integer" name="fontProviderFetchTimeout">
+          
+            <enum name="forever" value="-1"/>
+        </attr></declare-styleable>
+    <declare-styleable name="FontFamilyFont"><attr name="fontStyle">
+            <enum name="normal" value="0"/>
+            <enum name="italic" value="1"/>
+        </attr><attr format="reference" name="font"/><attr format="integer" name="fontWeight"/><attr name="android:fontStyle"/><attr name="android:font"/><attr name="android:fontWeight"/></declare-styleable>
+    <declare-styleable name="LoadingImageView"><attr name="imageAspectRatioAdjust">
+<enum name="none" value="0"/>
+
+<enum name="adjust_width" value="1"/>
+
+<enum name="adjust_height" value="2"/>
+
+</attr>
+
+<attr format="float" name="imageAspectRatio"/>
+
+<attr format="boolean" name="circleCrop"/>
+</declare-styleable>
+    <declare-styleable name="PageIndicatorView">
+<attr format="dimension" name="pageIndicatorDotSpacing"/>
+
+<attr format="dimension" name="pageIndicatorDotRadius"/>
+
+<attr format="dimension" name="pageIndicatorDotRadiusSelected"/>
+
+<attr format="color" name="pageIndicatorDotColor"/>
+
+<attr format="color" name="pageIndicatorDotColorSelected"/>
+
+<attr format="boolean" name="pageIndicatorDotFadeWhenIdle"/>
+
+<attr format="integer" name="pageIndicatorDotFadeOutDelay"/>
+
+<attr format="integer" name="pageIndicatorDotFadeOutDuration"/>
+
+<attr format="integer" name="pageIndicatorDotFadeInDuration"/>
+
+<attr format="color" name="pageIndicatorDotShadowColor"/>
+
+<attr format="dimension" name="pageIndicatorDotShadowRadius"/>
+
+<attr format="dimension" name="pageIndicatorDotShadowDx"/>
+
+<attr format="dimension" name="pageIndicatorDotShadowDy"/>
+</declare-styleable>
+    <declare-styleable name="PercentLayout_Layout"><attr format="fraction" name="layout_widthPercent"/><attr format="fraction" name="layout_heightPercent"/><attr format="fraction" name="layout_marginPercent"/><attr format="fraction" name="layout_marginLeftPercent"/><attr format="fraction" name="layout_marginTopPercent"/><attr format="fraction" name="layout_marginRightPercent"/><attr format="fraction" name="layout_marginBottomPercent"/><attr format="fraction" name="layout_marginStartPercent"/><attr format="fraction" name="layout_marginEndPercent"/><attr format="fraction" name="layout_aspectRatio"/></declare-styleable>
+    <declare-styleable name="ProgressSpinner">
+<attr format="color|reference" name="color_sequence"/>
+</declare-styleable>
+    <declare-styleable name="RecyclerView"><attr format="string" name="layoutManager"/><attr name="android:orientation"/><attr name="android:descendantFocusability"/><attr format="integer" name="spanCount"/><attr format="boolean" name="reverseLayout"/><attr format="boolean" name="stackFromEnd"/><attr format="boolean" name="fastScrollEnabled"/><attr format="reference" name="fastScrollVerticalThumbDrawable"/><attr format="reference" name="fastScrollVerticalTrackDrawable"/><attr format="reference" name="fastScrollHorizontalThumbDrawable"/><attr format="reference" name="fastScrollHorizontalTrackDrawable"/></declare-styleable>
+    <declare-styleable name="SignInButton"><attr format="reference" name="buttonSize">
+<enum name="standard" value="0"/>
+
+<enum name="wide" value="1"/>
+
+<enum name="icon_only" value="2"/>
+
+</attr>
+<attr format="reference" name="colorScheme">
+<enum name="dark" value="0"/>
+
+<enum name="light" value="1"/>
+
+<enum name="auto" value="2"/>
+
+</attr>
+
+<attr format="reference|string" name="scopeUris"/>
+</declare-styleable>
+    <declare-styleable name="WatchViewStub">
+<attr format="reference" name="rectLayout"/>
+
+<attr format="reference" name="roundLayout"/>
+</declare-styleable>
+    <declare-styleable name="WearableActionDrawer">
+<attr format="reference" name="action_menu"/>
+
+<attr format="string" name="drawer_title"/>
+
+<attr format="boolean" name="show_overflow_in_peek"/>
+</declare-styleable>
+    <declare-styleable name="WearableDialogPreference">
+<attr format="string" name="neutralButtonText"/>
+
+<attr format="reference" name="positiveButtonIcon"/>
+
+<attr format="reference" name="neutralButtonIcon"/>
+
+<attr format="reference" name="negativeButtonIcon"/>
+</declare-styleable>
+    <declare-styleable name="WearableDrawerView">
+<attr format="reference" name="peek_view"/>
+
+<attr format="reference" name="drawer_content"/>
+</declare-styleable>
+    <declare-styleable name="WearableFrameLayout"><attr name="layout_gravityRound">
+<flag name="top" value="0x30"/>
+<flag name="bottom" value="0x50"/>
+<flag name="left" value="0x03"/>
+<flag name="right" value="0x05"/>
+<flag name="center_vertical" value="0x10"/>
+<flag name="fill_vertical" value="0x70"/>
+<flag name="center_horizontal" value="0x01"/>
+<flag name="fill_horizontal" value="0x07"/>
+<flag name="center" value="0x11"/>
+<flag name="fill" value="0x77"/>
+<flag name="clip_vertical" value="0x80"/>
+<flag name="clip_horizontal" value="0x08"/>
+<flag name="start" value="0x00800003"/>
+<flag name="end" value="0x00800005"/>
+</attr>
+
+<attr format="dimension" name="layout_widthRound"/>
+
+<attr format="dimension" name="layout_heightRound"/>
+
+<attr format="dimension" name="layout_marginRound"/>
+
+<attr format="dimension" name="layout_marginLeftRound"/>
+
+<attr format="dimension" name="layout_marginTopRound"/>
+
+<attr format="dimension" name="layout_marginRightRound"/>
+
+<attr format="dimension" name="layout_marginBottomRound"/>
+
+<attr name="android:foregroundGravity"/>
+
+<attr name="android:foreground"/>
+
+<attr name="android:measureAllChildren"/>
+
+<attr name="android:foregroundTint"/>
+</declare-styleable>
+    <declare-styleable name="WearableNavigationDrawer"><attr name="navigation_style">
+<enum name="single_page" value="0"/>
+
+<enum name="multi_page" value="1"/>
+
+</attr>
+</declare-styleable>
+    <declare-styleable name="WearableRecyclerView">
+<attr format="fraction" name="bezel_width"/>
+
+<attr format="boolean" name="circular_scrolling_gesture_enabled"/>
+
+<attr format="float" name="scroll_degrees_per_screen"/>
+</declare-styleable>
 </resources>

@@ -58,6 +58,8 @@ public class MainActivity extends Activity
     private float mAccelLast, mAccel, mAccelCurrent, maxAccelSeen;
     public static final String LOG_TAG = "MEMES";
 
+    private static int counter = 0;
+
     @Override
     public void onCreate(Bundle b) {
         super.onCreate(b);
@@ -68,7 +70,7 @@ public class MainActivity extends Activity
         mDismissOverlayView.showIntroIfNecessary();
         mGestureDetector = new GestureDetectorCompat(this, new LongPressListener());
 
-        Toast.makeText(this, "hi", Toast.LENGTH_LONG).show();
+        //Toast.makeText(this, "hi", Toast.LENGTH_LONG).show();
 
 
         mSensorManager = ((SensorManager) getSystemService(SENSOR_SERVICE));
@@ -86,7 +88,7 @@ public class MainActivity extends Activity
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent event) {
-        Toast.makeText(this, "fwffwfwfwaf", Toast.LENGTH_LONG).show();
+        //Toast.makeText(this, "fwffwfwfwaf", Toast.LENGTH_LONG).show();
         return mGestureDetector.onTouchEvent(event) || super.dispatchTouchEvent(event);
     }
 
@@ -94,7 +96,7 @@ public class MainActivity extends Activity
     public void onSensorChanged(SensorEvent event) {
         if (event.sensor.getType() == Sensor.TYPE_HEART_RATE) {
             String msg = "" + (int)event.values[0];
-            Toast.makeText(this, "heart rate " + msg, Toast.LENGTH_LONG).show();
+            //Toast.makeText(this, "heart rate " + msg, Toast.LENGTH_LONG).show();
         } else if (event.sensor.getType() == Sensor.TYPE_ACCELEROMETER) {
             double threshold = (fallDetected) ? fallenThreshold : normalThreshold;
             mGravity = event.values.clone();
@@ -107,18 +109,26 @@ public class MainActivity extends Activity
             }
 
 
+            System.out.println(mAccel + " " + threshold + " wtf");
             if (DEBUG)
                 Log.d(LOG_TAG, "Sensor ServiceX: onChange mAccel=" + mAccel + " maxAccelSeen=" + maxAccelSeen + " threshold=" + threshold);
             if (mAccel > threshold) {
                 maxAccelSeen = 0;
                 if ((fallDetected) && (mAccel > fallenThreshold)) {
                     // fall detected
-                    Toast.makeText(this, "Fall detected", Toast.LENGTH_SHORT).show();
+                    if(counter > 15) {
+                        Toast.makeText(this, "Fall detected", Toast.LENGTH_SHORT).show();
+                        counter = 0;
+                    }
+                    counter++;
                 } else {
                     if ((!fallDetected) && (mAccel > normalThreshold)) {
                         fallDetected = true;
                         // fall detected
-                        Toast.makeText(this, "Fall detected", Toast.LENGTH_SHORT).show();
+                        if(counter > 15) {
+                            Toast.makeText(this, "Fall detected", Toast.LENGTH_SHORT).show();
+                            counter = 0;
+                        }
                     }
                 }
             }

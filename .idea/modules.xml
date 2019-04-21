@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Wearable/Wearable.iml" filepath="$PROJECT_DIR$/Wearable/Wearable.iml" />
-      <module fileurl="file://$PROJECT_DIR$/rpcs.iml" filepath="$PROJECT_DIR$/rpcs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/rpcswatch.iml" filepath="$PROJECT_DIR$/rpcswatch.iml" />
     </modules>
   </component>
 </project>

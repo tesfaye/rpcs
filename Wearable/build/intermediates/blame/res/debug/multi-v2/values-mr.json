@@ -1,44 +1,27 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\akshatp\\Desktop\\JuniorSpring\\RPCS\\rpcs\\Wearable\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-mr\\values-mr.xml",
+            "outputFile": "/Users/abel/Desktop/rpcswatch/Wearable/build/intermediates/incremental/mergeDebugResources/merged.dir/values-mr/values-mr.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\akshatp\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-base-11.8.0.aar\\599ba2ecf7f248d0128d5307d32362cd\\res\\values-mr\\values.xml",
+                    "source": "/Users/abel/.gradle/caches/transforms-2/files-2.1/62e66d087c3668b200f95a9dcb4177ae/res/values-mr/values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
                         "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
-                        "startOffsets": "281,387,583,705,815,1019,1138,1272,1394,1603,1709,1891,2013,2211,2390,2476,2568",
-                        "endColumns": "105,195,121,109,203,118,133,121,208,105,181,121,197,178,85,91,105",
-                        "endOffsets": "386,582,704,814,1018,1137,1271,1393,1602,1708,1890,2012,2210,2389,2475,2567,2673"
+                        "startOffsets": "245,350,549,670,780,984,1103,1237,1359,1568,1674,1859,1981,2179,2358,2444,2536",
+                        "endColumns": "104,198,120,109,203,118,133,121,208,105,184,121,197,178,85,91,105",
+                        "endOffsets": "349,548,669,779,983,1102,1236,1358,1567,1673,1858,1980,2178,2357,2443,2535,2641"
                     },
                     "to": {
                         "startLines": "2,3,4,5,6,7,8,9,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,215,411,537,651,855,978,1116,1444,1653,1763,1945,2071,2269,2452,2542,2638",
-                        "endColumns": "109,195,125,113,203,122,137,125,208,109,181,125,197,182,89,95,109",
-                        "endOffsets": "210,406,532,646,850,973,1111,1237,1648,1758,1940,2066,2264,2447,2537,2633,2743"
+                        "startOffsets": "105,214,413,538,652,856,979,1117,1445,1654,1764,1949,2075,2273,2456,2546,2642",
+                        "endColumns": "108,198,124,113,203,122,137,125,208,109,184,125,197,182,89,95,109",
+                        "endOffsets": "209,408,533,647,851,974,1112,1238,1649,1759,1944,2070,2268,2451,2541,2637,2747"
                     }
                 },
                 {
-                    "source": "C:\\Users\\akshatp\\.gradle\\caches\\transforms-1\\files-1.1\\play-services-basement-11.8.0.aar\\4bd9e2b8ea1734aeb128f0daa0b6812e\\res\\values-mr\\values.xml",
-                    "from": {
-                        "startLines": "4",
-                        "startColumns": "0",
-                        "startOffsets": "283",
-                        "endColumns": "201",
-                        "endOffsets": "484"
-                    },
-                    "to": {
-                        "startLines": "10",
-                        "startColumns": "4",
-                        "startOffsets": "1242",
-                        "endColumns": "201",
-                        "endOffsets": "1439"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\akshatp\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.0.2.aar\\da1dc14293496463928aaafed31bcd4d\\res\\values-mr\\values-mr.xml",
+                    "source": "/Users/abel/.gradle/caches/transforms-2/files-2.1/cae81d9a1ae1062e4ffd8b054eb4a4d4/res/values-mr/values-mr.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -49,9 +32,26 @@
                     "to": {
                         "startLines": "20",
                         "startColumns": "4",
-                        "startOffsets": "2748",
+                        "startOffsets": "2752",
                         "endColumns": "100",
-                        "endOffsets": "2844"
+                        "endOffsets": "2848"
+                    }
+                },
+                {
+                    "source": "/Users/abel/.gradle/caches/transforms-2/files-2.1/7f6b0f00896df326944b6ebcae4e1998/res/values-mr/values.xml",
+                    "from": {
+                        "startLines": "4",
+                        "startColumns": "0",
+                        "startOffsets": "247",
+                        "endColumns": "201",
+                        "endOffsets": "448"
+                    },
+                    "to": {
+                        "startLines": "10",
+                        "startColumns": "4",
+                        "startOffsets": "1243",
+                        "endColumns": "201",
+                        "endOffsets": "1440"
                     }
                 }
             ]
