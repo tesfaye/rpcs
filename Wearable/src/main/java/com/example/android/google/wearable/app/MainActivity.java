@@ -225,6 +225,7 @@ public class MainActivity extends Activity
                         + Base64.encodeToString(credentials.getBytes(),
                         Base64.NO_WRAP);
                 headers.put("authorization", auth);
+                headers.put("accept", "application/json");
                 headers.put("Content-Type", "application/json");
                 return headers;
             }
@@ -264,6 +265,7 @@ public class MainActivity extends Activity
                         + Base64.encodeToString(credentials.getBytes(),
                         Base64.NO_WRAP);
                 headers.put("authorization", auth);
+                headers.put("accept", "application/json");
                 headers.put("Content-Type", "application/json");
                 return headers;
             }
