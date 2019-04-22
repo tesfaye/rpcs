@@ -26,6 +26,7 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.os.Handler;
+import android.speech.tts.TextToSpeech;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.NotificationManagerCompat;
 import android.support.v4.view.GestureDetectorCompat;
@@ -55,6 +56,7 @@ import org.json.JSONObject;
 
 import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map;
 
 public class MainActivity extends Activity
@@ -198,6 +200,7 @@ public class MainActivity extends Activity
     }
 
     private void postHeartRate() throws JSONException {
+
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("event_id", 1);
         jsonObject.put("event_description", heartRate);
@@ -250,6 +253,18 @@ public class MainActivity extends Activity
     }
 
     private void postFall() throws JSONException {
+
+        TextToSpeech t1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(int i) {
+                // do nothing.
+            }
+        });
+
+        t1.setLanguage(Locale.US);
+
+        t1.speak("Abel fell down", TextToSpeech.QUEUE_FLUSH, null);
+
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("event_id", 0);
         jsonObject.put("event_description", Long.toString(System.currentTimeMillis()));

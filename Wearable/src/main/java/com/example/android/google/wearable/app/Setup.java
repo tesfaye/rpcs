@@ -16,7 +16,6 @@ public class Setup extends Application {
         super.onCreate();
 
         mRequestQueue = Volley.newRequestQueue(this);
-
         sInstance = this;
     }
 
