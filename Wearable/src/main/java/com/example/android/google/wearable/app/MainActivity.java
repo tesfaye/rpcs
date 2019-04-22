@@ -39,6 +39,7 @@ import android.view.View;
 import android.widget.ScrollView;
 import android.widget.Toast;
 
+import com.android.volley.AuthFailureError;
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.Response;
@@ -52,6 +53,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -157,9 +159,9 @@ public class MainActivity extends Activity
             }
 
 
-            System.out.println(mAccel + " " + threshold + " wtf");
+            //System.out.println(mAccel + " " + threshold + " wtf");
             if (DEBUG)
-                Log.d(LOG_TAG, "Sensor ServiceX: onChange mAccel=" + mAccel + " maxAccelSeen=" + maxAccelSeen + " threshold=" + threshold);
+               // Log.d(LOG_TAG, "Sensor ServiceX: onChange mAccel=" + mAccel + " maxAccelSeen=" + maxAccelSeen + " threshold=" + threshold);
             if (mAccel > threshold) {
                 maxAccelSeen = 0;
                 if ((fallDetected) && (mAccel > fallenThreshold)) {
@@ -203,11 +205,13 @@ public class MainActivity extends Activity
 
         JSONArray array = new JSONArray();
         array.put(jsonObject);
-        JsonArrayRequest jsonRequest = new JsonArrayRequest(Request.Method.POST, url, array, new Response.Listener<JSONArray>() {
+        final String requestBody = array.toString();
+        
+        StringRequest jsonRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override
-            public void onResponse(JSONArray response) {
+            public void onResponse(String response) {
                 //TODO: handle success
-                Log.d(TAG, "onResponse: fall detected and posted to server");
+                Log.d(TAG, "onResponse: heart rate detected and posted to server");
             }
         }, new Response.ErrorListener() {
             @Override
@@ -216,6 +220,17 @@ public class MainActivity extends Activity
                 //TODO: handle failure
             }
         }){
+            @Override
+            public byte[] getBody() {
+                try {
+                    return requestBody == null ? null : requestBody.getBytes("utf-8");
+                } catch (UnsupportedEncodingException exception) {
+                    exception.printStackTrace();
+                    //VolleyLog.wtf("Unsupported Encoding while trying to get the bytes of %s using %s", requestBody, "utf-8");
+                    return null;
+                }
+            }
+
             @Override
             public Map<String, String> getHeaders()  {
                 Map<String,String> headers = new HashMap<>();
@@ -243,9 +258,11 @@ public class MainActivity extends Activity
 
         JSONArray array = new JSONArray();
         array.put(jsonObject);
-        JsonArrayRequest jsonRequest = new JsonArrayRequest(Request.Method.POST, url, array, new Response.Listener<JSONArray>() {
+
+        final String requestBody = array.toString();
+        StringRequest jsonRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override
-            public void onResponse(JSONArray response) {
+            public void onResponse(String response) {
                 //TODO: handle success
                 Log.d(TAG, "onResponse: fall detected and posted to server");
             }
@@ -256,6 +273,17 @@ public class MainActivity extends Activity
                 //TODO: handle failure
             }
         }){
+            @Override
+            public byte[] getBody() {
+                try {
+                    return requestBody == null ? null : requestBody.getBytes("utf-8");
+                } catch (UnsupportedEncodingException exception) {
+                    exception.printStackTrace();
+                    //VolleyLog.wtf("Unsupported Encoding while trying to get the bytes of %s using %s", requestBody, "utf-8");
+                    return null;
+                }
+            }
+
             @Override
             public Map<String, String> getHeaders()  {
                 Map<String,String> headers = new HashMap<>();
@@ -271,7 +299,6 @@ public class MainActivity extends Activity
             }
         };
 
-        System.out.println("request is " +"Request body: " + new String(jsonRequest.getBody()));
         jsonRequest.setRetryPolicy(new DefaultRetryPolicy(10 * 1000, 0, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT));
         Setup.getInstance().getRequestQueue().add(jsonRequest);
     }
