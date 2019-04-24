@@ -148,7 +148,8 @@ public class MainActivity extends Activity
     public void onSensorChanged(SensorEvent event) {
         if (event.sensor.getType() == Sensor.TYPE_HEART_RATE) {
             heartRate = "" + (int)event.values[0];
-            //Toast.makeText(this, "heart rate " + msg, Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "heart rate " + heartRate, Toast.LENGTH_SHORT).show();
+            Log.d(TAG, "current heart rate is " + heartRate);
         } else if (event.sensor.getType() == Sensor.TYPE_ACCELEROMETER) {
             double threshold = (fallDetected) ? fallenThreshold : normalThreshold;
             mGravity = event.values.clone();
@@ -263,7 +264,7 @@ public class MainActivity extends Activity
 
         t1.setLanguage(Locale.US);
 
-        t1.speak("Abel fell down", TextToSpeech.QUEUE_FLUSH, null);
+        t1.speak("fall detected", TextToSpeech.QUEUE_FLUSH, null);
 
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("event_id", 0);
@@ -303,7 +304,7 @@ public class MainActivity extends Activity
             public Map<String, String> getHeaders()  {
                 Map<String,String> headers = new HashMap<>();
                 // add headers <key,value>
-                String credentials = "watch_user"+":"+"rpcs_watch2019";
+                String credentials = "watch_user"+":"+  "rpcs_watch2019";
                 String auth = "Basic "
                         + Base64.encodeToString(credentials.getBytes(),
                         Base64.NO_WRAP);
