@@ -21,6 +21,7 @@ public class Recorder {
     private LightRecorder lightRecorder = null;
     private AudioRecorder audioRecorder = null;
     private StringBuilder data = new StringBuilder();
+    private String file = "fileData";
     private String startTime = "";
     private PowerManager.WakeLock wakeLock;
     private boolean running = false;
@@ -139,29 +140,9 @@ public class Recorder {
     private void dumpData() {
 
         // Save the data
-
-        FileOutputStream outputStream;
-
-        try {
-            outputStream = new FileOutputStream(new File(getStorageDir(), startTime),true);
-            outputStream.write(data.toString().getBytes());
-            outputStream.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        //Hooks.call(Hooks.RECORDING_LIST_UPDATE); IDK ABOUT THIS
+        FileHandler.saveFile(data.toString(), file);
 
         // Clear the data
         data.setLength(0);
     }
-
-    private static File getStorageDir() {
-        // Get the directory for the app's private pictures directory.
-        File file = Setup.getInstance().getExternalFilesDir("recordings");
-        if (file == null || !file.mkdirs()) {
-            Log.d("FileHandler", "Directory not created");
-        }
-        return file;
-    }
-
 }
