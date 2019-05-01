@@ -16,10 +16,12 @@
 
 package com.example.android.google.wearable.app;
 
+import android.Manifest;
 import android.app.Activity;
 import android.app.Notification;
 import android.app.PendingIntent;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -27,8 +29,10 @@ import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.speech.tts.TextToSpeech;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.NotificationManagerCompat;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.GestureDetectorCompat;
 import android.support.wearable.view.DelayedConfirmationView;
 import android.support.wearable.view.DismissOverlayView;
@@ -55,9 +59,13 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.UnsupportedEncodingException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
+import java.util.TimeZone;
 
 public class MainActivity extends Activity
         implements DelayedConfirmationView.DelayedConfirmationListener, SensorEventListener {
@@ -74,9 +82,9 @@ public class MainActivity extends Activity
 
     SensorManager mSensorManager;
     Sensor mHeartRateSensor;
-    SensorEventListener sensorEventListener;
+
     private Boolean fallDetected = false;
-    public static float normalThreshold = 10, fallenThreshold = 5;
+    public static float normalThreshold = 10, fallenThreshold = 10;
     private float[] mGravity;
     private float mAccelLast, mAccel, mAccelCurrent, maxAccelSeen;
     public static final String LOG_TAG = "MEMES";
@@ -131,12 +139,17 @@ public class MainActivity extends Activity
         Log.i(TAG, "LISTENER REGISTERED.");
 
 
-        mSensorManager.registerListener(sensorEventListener, mHeartRateSensor, mSensorManager.SENSOR_DELAY_FASTEST);
+        //mSensorManager.registerListener(this, mHeartRateSensor, mSensorManager.SENSOR_DELAY_FASTEST);
 
         startRepeatingTask();
 
+        requestRecordAudioPermission();
 
-
+        try {
+            postHeartRate();
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -146,7 +159,9 @@ public class MainActivity extends Activity
 
     @Override
     public void onSensorChanged(SensorEvent event) {
+
         if (event.sensor.getType() == Sensor.TYPE_HEART_RATE) {
+
             heartRate = "" + (int)event.values[0];
             Toast.makeText(this, "heart rate " + heartRate, Toast.LENGTH_SHORT).show();
             Log.d(TAG, "current heart rate is " + heartRate);
@@ -200,16 +215,27 @@ public class MainActivity extends Activity
             Log.d(TAG, "Unknown sensor type");
     }
 
+    private String getUTCTime() {
+        TimeZone tz = TimeZone.getTimeZone("UTC");
+        DateFormat df = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"); // Quoted "Z" to indicate UTC, no timezone offset
+        df.setTimeZone(tz);
+        String nowAsISO = df.format(new Date());
+        return nowAsISO;
+    }
+
     private void postHeartRate() throws JSONException {
 
+        if(heartRate == null) return;
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("event_id", 1);
-        jsonObject.put("event_description", heartRate);
+        jsonObject.put("event_description", "" + heartRate);
         jsonObject.put("event_category", "heartrate");
+        jsonObject.put("timestamp", getUTCTime());
 
         JSONArray array = new JSONArray();
         array.put(jsonObject);
         final String requestBody = array.toString();
+        System.out.println("json is " + requestBody);
         
         StringRequest jsonRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override
@@ -221,7 +247,19 @@ public class MainActivity extends Activity
             @Override
             public void onErrorResponse(VolleyError error) {
                 error.printStackTrace();
-                //TODO: handle failure
+                System.err.println("heart rate failed to post");
+//                //get status code here
+//                final String statusCode = String.valueOf(error.networkResponse.statusCode);
+//                //get response body and parse with appropriate encoding
+//
+//
+//                try {
+//                    String body = new String(error.networkResponse.data,"UTF-8");
+//                    System.err.println(body);
+//                } catch (UnsupportedEncodingException e) {
+//                    // exception
+//                }
+//                //TODO: handle failure
             }
         }){
             @Override
@@ -269,6 +307,7 @@ public class MainActivity extends Activity
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("event_id", 0);
         jsonObject.put("event_description", Long.toString(System.currentTimeMillis()));
+        jsonObject.put("timestamp", getUTCTime());
         jsonObject.put("event_category", "fall");
 
 
@@ -378,5 +417,48 @@ public class MainActivity extends Activity
     protected void onDestroy() {
         super.onDestroy();
         stopRepeatingTask();
+    }
+
+    private void requestRecordAudioPermission() {
+        //check API version, do nothing if API version < 23!
+        int currentapiVersion = android.os.Build.VERSION.SDK_INT;
+        if (currentapiVersion > android.os.Build.VERSION_CODES.LOLLIPOP){
+
+//            if (ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
+//
+//                // Should we show an explanation?
+//                if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.RECORD_AUDIO)) {
+//
+//                    // Show an expanation to the user *asynchronously* -- don't block
+//                    // this thread waiting for the user's response! After the user
+//                    // sees the explanation, try again to request the permission.
+//
+//                } else {
+//
+//                    // No explanation needed, we can request the permission.
+//
+//                    ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.RECORD_AUDIO}, 1);
+//                }
+//            }
+
+            if (ContextCompat.checkSelfPermission(this, Manifest.permission.BODY_SENSORS) != PackageManager.PERMISSION_GRANTED) {
+
+                // Should we show an explanation?
+                if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.BODY_SENSORS)) {
+
+                    // Show an expanation to the user *asynchronously* -- don't block
+                    // this thread waiting for the user's response! After the user
+                    // sees the explanation, try again to request the permission.
+                    System.err.println("CASE 1");
+
+                } else {
+
+                    // No explanation needed, we can request the permission.
+
+                    ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.BODY_SENSORS}, 1);
+                    System.err.println("CASE 2");
+                }
+            }
+        }
     }
 }
