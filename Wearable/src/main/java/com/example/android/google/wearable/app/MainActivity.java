@@ -95,8 +95,7 @@ public class MainActivity extends Activity
     private final static int INTERVAL = 1000 * 30; //2 minutes
     Handler mHandler = new Handler();
 
-    Runnable mHandlerTask = new Runnable()
-    {
+    Runnable mHandlerTask = new Runnable() {
         @Override
         public void run() {
             try {
@@ -108,13 +107,11 @@ public class MainActivity extends Activity
         }
     };
 
-    void startRepeatingTask()
-    {
+    void startRepeatingTask() {
         mHandlerTask.run();
     }
 
-    void stopRepeatingTask()
-    {
+    void stopRepeatingTask() {
         mHandler.removeCallbacks(mHandlerTask);
     }
 
@@ -123,6 +120,7 @@ public class MainActivity extends Activity
         super.onCreate(b);
         setContentView(R.layout.main_activity);
 
+        requestRecordAudioPermission();
         mDismissOverlayView = (DismissOverlayView) findViewById(R.id.dismiss_overlay);
         mDismissOverlayView.setIntroText(R.string.intro_text);
         mDismissOverlayView.showIntroIfNecessary();
@@ -145,11 +143,12 @@ public class MainActivity extends Activity
 
         requestRecordAudioPermission();
 
-        try {
-            postHeartRate();
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
+
+        Intent trackingIntent = new Intent(MainActivity.this, RecordingService.class);
+        MainActivity.this.startService(trackingIntent);
+        //lmao
+
+
     }
 
     @Override
@@ -162,7 +161,7 @@ public class MainActivity extends Activity
 
         if (event.sensor.getType() == Sensor.TYPE_HEART_RATE) {
 
-            heartRate = "" + (int)event.values[0];
+            heartRate = "" + (int) event.values[0];
             Toast.makeText(this, "heart rate " + heartRate, Toast.LENGTH_SHORT).show();
             Log.d(TAG, "current heart rate is " + heartRate);
         } else if (event.sensor.getType() == Sensor.TYPE_ACCELEROMETER) {
@@ -179,26 +178,12 @@ public class MainActivity extends Activity
 
             //System.out.println(mAccel + " " + threshold + " wtf");
             if (DEBUG)
-               // Log.d(LOG_TAG, "Sensor ServiceX: onChange mAccel=" + mAccel + " maxAccelSeen=" + maxAccelSeen + " threshold=" + threshold);
-            if (mAccel > threshold) {
-                maxAccelSeen = 0;
-                if ((fallDetected) && (mAccel > fallenThreshold)) {
-                    // fall detected
-                    if(counter > 15) {
-                        try {
-                            postFall();
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-                        Toast.makeText(this, "Fall detected", Toast.LENGTH_SHORT).show();
-                        counter = 0;
-                    }
-                    counter++;
-                } else {
-                    if ((!fallDetected) && (mAccel > normalThreshold)) {
-                        fallDetected = true;
+                // Log.d(LOG_TAG, "Sensor ServiceX: onChange mAccel=" + mAccel + " maxAccelSeen=" + maxAccelSeen + " threshold=" + threshold);
+                if (mAccel > threshold) {
+                    maxAccelSeen = 0;
+                    if ((fallDetected) && (mAccel > fallenThreshold)) {
                         // fall detected
-                        if(counter > 15) {
+                        if (counter > 15) {
                             try {
                                 postFall();
                             } catch (JSONException e) {
@@ -207,11 +192,24 @@ public class MainActivity extends Activity
                             Toast.makeText(this, "Fall detected", Toast.LENGTH_SHORT).show();
                             counter = 0;
                         }
+                        counter++;
+                    } else {
+                        if ((!fallDetected) && (mAccel > normalThreshold)) {
+                            fallDetected = true;
+                            // fall detected
+                            if (counter > 15) {
+                                try {
+                                    postFall();
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
+                                }
+                                Toast.makeText(this, "Fall detected", Toast.LENGTH_SHORT).show();
+                                counter = 0;
+                            }
+                        }
                     }
                 }
-            }
-        }
-        else
+        } else
             Log.d(TAG, "Unknown sensor type");
     }
 
@@ -225,7 +223,7 @@ public class MainActivity extends Activity
 
     private void postHeartRate() throws JSONException {
 
-        if(heartRate == null) return;
+        if (heartRate == null) return;
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("event_id", 1);
         jsonObject.put("event_description", "" + heartRate);
@@ -236,7 +234,7 @@ public class MainActivity extends Activity
         array.put(jsonObject);
         final String requestBody = array.toString();
         System.out.println("json is " + requestBody);
-        
+
         StringRequest jsonRequest = new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -261,7 +259,7 @@ public class MainActivity extends Activity
 //                }
 //                //TODO: handle failure
             }
-        }){
+        }) {
             @Override
             public byte[] getBody() {
                 try {
@@ -274,10 +272,10 @@ public class MainActivity extends Activity
             }
 
             @Override
-            public Map<String, String> getHeaders()  {
-                Map<String,String> headers = new HashMap<>();
+            public Map<String, String> getHeaders() {
+                Map<String, String> headers = new HashMap<>();
                 // add headers <key,value>
-                String credentials = "watch_user"+":"+"rpcs_watch2019";
+                String credentials = "watch_user" + ":" + "rpcs_watch2019";
                 String auth = "Basic "
                         + Base64.encodeToString(credentials.getBytes(),
                         Base64.NO_WRAP);
@@ -327,7 +325,7 @@ public class MainActivity extends Activity
                 error.printStackTrace();
                 //TODO: handle failure
             }
-        }){
+        }) {
             @Override
             public byte[] getBody() {
                 try {
@@ -340,10 +338,10 @@ public class MainActivity extends Activity
             }
 
             @Override
-            public Map<String, String> getHeaders()  {
-                Map<String,String> headers = new HashMap<>();
+            public Map<String, String> getHeaders() {
+                Map<String, String> headers = new HashMap<>();
                 // add headers <key,value>
-                String credentials = "watch_user"+":"+  "rpcs_watch2019";
+                String credentials = "watch_user" + ":" + "rpcs_watch2019";
                 String auth = "Basic "
                         + Base64.encodeToString(credentials.getBytes(),
                         Base64.NO_WRAP);
@@ -422,43 +420,57 @@ public class MainActivity extends Activity
     private void requestRecordAudioPermission() {
         //check API version, do nothing if API version < 23!
         int currentapiVersion = android.os.Build.VERSION.SDK_INT;
-        if (currentapiVersion > android.os.Build.VERSION_CODES.LOLLIPOP){
+        if (currentapiVersion > android.os.Build.VERSION_CODES.LOLLIPOP) {
 
-//            if (ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
-//
-//                // Should we show an explanation?
-//                if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.RECORD_AUDIO)) {
-//
-//                    // Show an expanation to the user *asynchronously* -- don't block
-//                    // this thread waiting for the user's response! After the user
-//                    // sees the explanation, try again to request the permission.
-//
-//                } else {
-//
-//                    // No explanation needed, we can request the permission.
-//
-//                    ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.RECORD_AUDIO}, 1);
-//                }
-//            }
+
+            if (ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
+
+                // Should we show an explanation?
+                if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.RECORD_AUDIO)) {
+
+                    // Show an expanation to the user *asynchronously* -- don't block
+                    // this thread waiting for the user's response! After the user
+                    // sees the explanation, try again to request the permission.
+
+                } else {
+
+                    // No explanation needed, we can request the permission.
+
+                    ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.RECORD_AUDIO}, 1);
+                }
+            }
 
             if (ContextCompat.checkSelfPermission(this, Manifest.permission.BODY_SENSORS) != PackageManager.PERMISSION_GRANTED) {
 
                 // Should we show an explanation?
                 if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.BODY_SENSORS)) {
 
-                    // Show an expanation to the user *asynchronously* -- don't block
-                    // this thread waiting for the user's response! After the user
-                    // sees the explanation, try again to request the permission.
-                    System.err.println("CASE 1");
+                    if (ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
 
-                } else {
+                        // Should we show an explanation?
+                        if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.RECORD_AUDIO)) {
 
-                    // No explanation needed, we can request the permission.
 
-                    ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.BODY_SENSORS}, 1);
-                    System.err.println("CASE 2");
+                            // Show an expanation to the user *asynchronously* -- don't block
+                            // this thread waiting for the user's response! After the user
+                            // sees the explanation, try again to request the permission.
+
+
+
+                        } else {
+
+                            // No explanation needed, we can request the permission.
+
+
+                            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.BODY_SENSORS}, 1);
+
+                            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.RECORD_AUDIO}, 1);
+
+                        }
+                    }
                 }
             }
         }
     }
+
 }

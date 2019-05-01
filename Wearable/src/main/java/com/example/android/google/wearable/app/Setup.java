@@ -8,6 +8,7 @@ import com.android.volley.toolbox.Volley;
 public class Setup extends Application {
 
     private static Setup sInstance;
+    public static Recorder recorder;
 
     private RequestQueue mRequestQueue;
 
@@ -17,6 +18,7 @@ public class Setup extends Application {
 
         mRequestQueue = Volley.newRequestQueue(this);
         sInstance = this;
+        recorder = new Recorder();
     }
 
     public synchronized static Setup getInstance() {
