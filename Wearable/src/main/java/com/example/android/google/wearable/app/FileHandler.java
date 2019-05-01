@@ -55,7 +55,7 @@ public class FileHandler {
         return text.toString();
     }
 
-    private static File getStorageDir() {
+    public static File getStorageDir() {
         // Get the directory for the app's private pictures directory.
         File file = Setup.getInstance().getExternalFilesDir("recordings");
         if (file == null || !file.mkdirs()) {
