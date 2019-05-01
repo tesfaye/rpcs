@@ -140,17 +140,7 @@ public class Recorder {
     private void dumpData() {
 
         // Save the data
-
-        FileOutputStream outputStream;
-
-        try {
-            outputStream = new FileOutputStream(new File(getStorageDir(), fileName),true);
-            outputStream.write(data.toString().getBytes());
-            outputStream.close();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        //Hooks.call(Hooks.RECORDING_LIST_UPDATE); IDK ABOUT THIS
+        FileHandler.saveFile(data.toString(), fileName);
 
         // Clear the data
         data.setLength(0);
