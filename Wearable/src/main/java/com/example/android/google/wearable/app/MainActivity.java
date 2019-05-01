@@ -294,6 +294,18 @@ public class MainActivity extends Activity
             @Override
             public void onErrorResponse(VolleyError error) {
                 error.printStackTrace();
+
+                String body;
+                //get status code here
+                final String statusCode = String.valueOf(error.networkResponse.statusCode);
+                System.err.println("fall failed to post " +statusCode);
+                //get response body and parse with appropriate encoding
+                try {
+                    body = new String(error.networkResponse.data,"UTF-8");
+                    System.err.println("fall failed to post " + body );
+                } catch (UnsupportedEncodingException e) {
+                    // exception
+                }
                 //TODO: handle failure
             }
         }) {
