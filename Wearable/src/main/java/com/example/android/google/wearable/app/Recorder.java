@@ -21,7 +21,7 @@ public class Recorder {
     private LightRecorder lightRecorder = null;
     private AudioRecorder audioRecorder = null;
     private StringBuilder data = new StringBuilder();
-    private String fileName = "file";
+    private String fileName = "sleep.data";
     private String startTime = "";
     private PowerManager.WakeLock wakeLock;
     private boolean running = false;
@@ -44,6 +44,8 @@ public class Recorder {
         this.data.append(this.startTime);
         this.data.append(";");
 
+        //dumpData();
+        //System.err.println("DATA DUMPED");
         // Start the light recorder
         lightRecorder = new LightRecorder();
         lightRecorder.start(context);
@@ -85,6 +87,7 @@ public class Recorder {
                     data.append(";");
                     // Dump the data to the text file if we accumulated "enough" Approximately every 15 minutes
                     if (data.length() > 600) {
+
                         dumpData();
                     }
                     //System.err.println(data.length() + " " + data + "LMAO ");
@@ -147,14 +150,4 @@ public class Recorder {
         // Clear the data
         data.setLength(0);
     }
-
-    private static File getStorageDir() {
-        // Get the directory for the app's private pictures directory.
-        File file = Setup.getInstance().getExternalFilesDir("recordings");
-        if (file == null || !file.mkdirs()) {
-            Log.d("FileHandler", "Directory not created");
-        }
-        return file;
-    }
-
 }

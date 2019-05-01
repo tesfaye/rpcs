@@ -25,6 +25,7 @@ import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.ActivityCompat;
@@ -79,7 +80,7 @@ public class MainActivity extends Activity
     private float mAccelLast, mAccel, mAccelCurrent, maxAccelSeen;
     public static final String LOG_TAG = "MEMES";
 
-    private String filename = "file";
+    private String filename = "sleep.data";
     private final static int HEART_INTERVAL = 1000 * 30; //2 minutes
     private final static int SLEEP_INTERVAL = 1000 * 30 * 30 * 10; // 10 hours
 
@@ -116,9 +117,9 @@ public class MainActivity extends Activity
     private int getSleepQuality() {
 
         File file = new File(FileHandler.getStorageDir(), filename);
-
+        //System.out.println("file exists " + file.getAbsolutePath());
         String content = FileHandler.readFile(file);
-
+        //System.out.println("file contains " + content);
         String[] parts = content.split(";");
         String start = parts[0];
 
@@ -249,10 +250,13 @@ public class MainActivity extends Activity
 
     void startRepeatingTask() {
         mHandlerTask.run();
+        //mHandlerTask1.run();
+        mHandler.postDelayed(mHandlerTask1, SLEEP_INTERVAL);
     }
 
     void stopRepeatingTask() {
         mHandler.removeCallbacks(mHandlerTask);
+        mHandler.removeCallbacks(mHandlerTask1);
     }
 
     @Override
@@ -277,12 +281,24 @@ public class MainActivity extends Activity
         Log.i(TAG, "LISTENER REGISTERED.");
 
 
-        //mSensorManager.registerListener(this, mHeartRateSensor, mSensorManager.SENSOR_DELAY_FASTEST);
-
+        mSensorManager.registerListener(this, mHeartRateSensor, mSensorManager.SENSOR_DELAY_FASTEST);
+//        AsyncTask.execute(new Runnable() {
+//            @Override
+//            public void run() {
+//                System.err.println("sleep quality is " + getSleepQuality());
+//            }
+//        });
+        //System.out.println("quality is " + getSleepQuality());
         startRepeatingTask();
 
         Intent trackingIntent = new Intent(MainActivity.this, RecordingService.class);
         MainActivity.this.startService(trackingIntent);
+
+//        try {
+//            postHeartRate();
+//        } catch (JSONException e) {
+//            e.printStackTrace();
+//        }
     }
 
     @Override
