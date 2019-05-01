@@ -72,7 +72,7 @@ public class MainActivity extends Activity
     Sensor mHeartRateSensor;
 
     private Boolean fallDetected = false;
-    public static float normalThreshold = 12, fallenThreshold = 12;
+    public static float normalThreshold = 15, fallenThreshold = 15;
     private float[] mGravity;
     private float mAccelLast, mAccel, mAccelCurrent, maxAccelSeen;
     public static final String LOG_TAG = "MEMES";
@@ -145,7 +145,7 @@ public class MainActivity extends Activity
         if (event.sensor.getType() == Sensor.TYPE_HEART_RATE) {
 
             heartRate = "" + (int) event.values[0];
-            Toast.makeText(this, "heart rate " + heartRate, Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this, "heart rate " + heartRate, Toast.LENGTH_SHORT).show();
             Log.d(TAG, "current heart rate is " + heartRate);
         } else if (event.sensor.getType() == Sensor.TYPE_ACCELEROMETER) {
             double threshold = (fallDetected) ? fallenThreshold : normalThreshold;
@@ -172,7 +172,7 @@ public class MainActivity extends Activity
                             } catch (JSONException e) {
                                 e.printStackTrace();
                             }
-                            Toast.makeText(this, "Fall detected", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(this, "Fall detected", Toast.LENGTH_LONG).show();
                             counter = 0;
                         }
                         counter++;
@@ -186,7 +186,7 @@ public class MainActivity extends Activity
                                 } catch (JSONException e) {
                                     e.printStackTrace();
                                 }
-                                Toast.makeText(this, "Fall detected", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(this, "Fall detected", Toast.LENGTH_LONG).show();
                                 counter = 0;
                             }
                         }

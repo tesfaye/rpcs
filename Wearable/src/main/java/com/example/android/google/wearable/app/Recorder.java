@@ -83,10 +83,10 @@ public class Recorder {
 
                     data.append(";");
                     // Dump the data to the text file if we accumulated "enough" Approximately every 15 minutes
-                    if (data.length() > 1000) {
+                    if (data.length() > 600) {
                         dumpData();
                     }
-                    System.err.println(data + "LMAO");
+                    //System.err.println(data.length() + " " + data + "LMAO ");
                     noiseModel.resetEvents();
 
                     // Restart in 5 seconds
