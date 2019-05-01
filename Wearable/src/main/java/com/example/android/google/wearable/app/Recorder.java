@@ -21,6 +21,7 @@ public class Recorder {
     private LightRecorder lightRecorder = null;
     private AudioRecorder audioRecorder = null;
     private StringBuilder data = new StringBuilder();
+    private String fileName = "file";
     private String startTime = "";
     private PowerManager.WakeLock wakeLock;
     private boolean running = false;
@@ -143,7 +144,7 @@ public class Recorder {
         FileOutputStream outputStream;
 
         try {
-            outputStream = new FileOutputStream(new File(getStorageDir(), startTime),true);
+            outputStream = new FileOutputStream(new File(getStorageDir(), fileName),true);
             outputStream.write(data.toString().getBytes());
             outputStream.close();
         } catch (Exception e) {
