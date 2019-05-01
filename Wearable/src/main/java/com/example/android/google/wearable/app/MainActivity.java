@@ -18,6 +18,7 @@ package com.example.android.google.wearable.app;
 
 import android.Manifest;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.hardware.Sensor;
@@ -26,9 +27,7 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.os.Handler;
-import android.speech.tts.TextToSpeech;
 import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
 import android.support.v4.view.GestureDetectorCompat;
 import android.support.wearable.view.DelayedConfirmationView;
 import android.support.wearable.view.DismissOverlayView;
@@ -55,7 +54,6 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.Locale;
 import java.util.Map;
 import java.util.TimeZone;
 
@@ -74,7 +72,7 @@ public class MainActivity extends Activity
     Sensor mHeartRateSensor;
 
     private Boolean fallDetected = false;
-    public static float normalThreshold = 10, fallenThreshold = 10;
+    public static float normalThreshold = 12, fallenThreshold = 12;
     private float[] mGravity;
     private float mAccelLast, mAccel, mAccelCurrent, maxAccelSeen;
     public static final String LOG_TAG = "MEMES";
@@ -110,7 +108,7 @@ public class MainActivity extends Activity
         super.onCreate(b);
         setContentView(R.layout.main_activity);
 
-        requestRecordAudioPermission();
+        requestPermissions();
         mDismissOverlayView = (DismissOverlayView) findViewById(R.id.dismiss_overlay);
         mDismissOverlayView.setIntroText(R.string.intro_text);
         mDismissOverlayView.showIntroIfNecessary();
@@ -130,8 +128,6 @@ public class MainActivity extends Activity
         //mSensorManager.registerListener(this, mHeartRateSensor, mSensorManager.SENSOR_DELAY_FASTEST);
 
         startRepeatingTask();
-
-        requestRecordAudioPermission();
 
 
         Intent trackingIntent = new Intent(MainActivity.this, RecordingService.class);
@@ -392,58 +388,37 @@ public class MainActivity extends Activity
         stopRepeatingTask();
     }
 
-    private void requestRecordAudioPermission() {
+    public static boolean hasPermissions(Context context, String... permissions) {
+        if (context != null && permissions != null) {
+            for (String permission : permissions) {
+                if (ActivityCompat.checkSelfPermission(context, permission) != PackageManager.PERMISSION_GRANTED) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    private void requestPermissions() {
         //check API version, do nothing if API version < 23!
         int currentapiVersion = android.os.Build.VERSION.SDK_INT;
         if (currentapiVersion > android.os.Build.VERSION_CODES.LOLLIPOP) {
 
 
-            if (ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
+            int PERMISSION_ALL = 1;
+            String[] PERMISSIONS = {
+                    Manifest.permission.BODY_SENSORS,
+                    Manifest.permission.WAKE_LOCK,
+                    Manifest.permission.ACCESS_FINE_LOCATION,
+                    Manifest.permission.ACCESS_COARSE_LOCATION,
+                    Manifest.permission.INTERNET,
+                    Manifest.permission.RECORD_AUDIO,
+                    Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                    Manifest.permission.ACCESS_NETWORK_STATE
+            };
 
-                // Should we show an explanation?
-                if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.RECORD_AUDIO)) {
-
-                    // Show an expanation to the user *asynchronously* -- don't block
-                    // this thread waiting for the user's response! After the user
-                    // sees the explanation, try again to request the permission.
-
-                } else {
-
-                    // No explanation needed, we can request the permission.
-
-                    ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.RECORD_AUDIO}, 1);
-                }
-            }
-
-            if (ContextCompat.checkSelfPermission(this, Manifest.permission.BODY_SENSORS) != PackageManager.PERMISSION_GRANTED) {
-
-                // Should we show an explanation?
-                if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.BODY_SENSORS)) {
-
-                    if (ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
-
-                        // Should we show an explanation?
-                        if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.RECORD_AUDIO)) {
-
-
-                            // Show an expanation to the user *asynchronously* -- don't block
-                            // this thread waiting for the user's response! After the user
-                            // sees the explanation, try again to request the permission.
-
-
-
-                        } else {
-
-                            // No explanation needed, we can request the permission.
-
-
-                            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.BODY_SENSORS}, 1);
-
-                            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.RECORD_AUDIO}, 1);
-
-                        }
-                    }
-                }
+            if(!hasPermissions(this, PERMISSIONS)){
+                ActivityCompat.requestPermissions(this, PERMISSIONS, PERMISSION_ALL);
             }
         }
     }
