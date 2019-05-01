@@ -18,8 +18,6 @@ package com.example.android.google.wearable.app;
 
 import android.Manifest;
 import android.app.Activity;
-import android.app.Notification;
-import android.app.PendingIntent;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.hardware.Sensor;
@@ -30,8 +28,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.speech.tts.TextToSpeech;
 import android.support.v4.app.ActivityCompat;
-import android.support.v4.app.NotificationCompat;
-import android.support.v4.app.NotificationManagerCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.GestureDetectorCompat;
 import android.support.wearable.view.DelayedConfirmationView;
@@ -44,15 +40,11 @@ import android.view.View;
 import android.widget.ScrollView;
 import android.widget.Toast;
 
-import com.android.volley.AuthFailureError;
 import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonArrayRequest;
-import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
-import com.google.android.gms.common.internal.Constants;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -73,8 +65,6 @@ public class MainActivity extends Activity
     final String url = "http://kinect.andrew.cmu.edu:8000/watch/events";
     public static final boolean DEBUG = true;
 
-    private static final int NOTIFICATION_ID = 1;
-    private static final int NOTIFICATION_REQUEST_CODE = 1;
     private static final int NUM_SECONDS = 5;
 
     private GestureDetectorCompat mGestureDetector;
@@ -146,9 +136,6 @@ public class MainActivity extends Activity
 
         Intent trackingIntent = new Intent(MainActivity.this, RecordingService.class);
         MainActivity.this.startService(trackingIntent);
-        //lmao
-
-
     }
 
     @Override
@@ -290,18 +277,6 @@ public class MainActivity extends Activity
     }
 
     private void postFall() throws JSONException {
-
-        TextToSpeech t1 = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-            @Override
-            public void onInit(int i) {
-                // do nothing.
-            }
-        });
-
-        t1.setLanguage(Locale.US);
-
-        t1.speak("fall detected", TextToSpeech.QUEUE_FLUSH, null);
-
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("event_id", 0);
         jsonObject.put("event_description", Long.toString(System.currentTimeMillis()));
